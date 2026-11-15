@@ -1,0 +1,1644 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1B4332">
+    <meta name="description" content="Générateur de fiches de devoirs du CP à la 3ème : maths, français, histoire-géo et sciences, avec corrigé. À imprimer en A4.">
+    <meta property="og:title" content="L'Atelier du Cartable — Générateur de Fiches de Devoirs">
+    <meta property="og:description" content="Fiches d'exercices CP à 3ème avec corrigé, à imprimer en A4.">
+    <meta property="og:type" content="website">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="L'Atelier du Cartable">
+    <title>L'Atelier du Cartable — Générateur de Fiches de Devoirs (CP à 3ème)</title>
+    
+    <!-- Favicon & Icône de Bureau sur mesure (Cartable d'écolier avec crayon et règle) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Crect width='128' height='128' rx='28' fill='%231B4332'/%3E%3Cg transform='translate(74, 16) rotate(18)'%3E%3Crect x='0' y='0' width='16' height='64' rx='3' fill='%23FBBF24' stroke='%231E293B' stroke-width='3'/%3E%3Cline x1='0' y1='12' x2='6' y2='12' stroke='%231E293B' stroke-width='2.5'/%3E%3Cline x1='0' y1='24' x2='9' y2='24' stroke='%231E293B' stroke-width='2.5'/%3E%3Cline x1='0' y1='36' x2='6' y2='36' stroke='%231E293B' stroke-width='2.5'/%3E%3Cline x1='0' y1='48' x2='9' y2='48' stroke='%231E293B' stroke-width='2.5'/%3E%3C/g%3E%3Cg transform='translate(28, 22) rotate(-22)'%3E%3Crect x='0' y='8' width='12' height='46' rx='2' fill='%23FDE047' stroke='%231E293B' stroke-width='3'/%3E%3Crect x='0' y='2' width='12' height='8' rx='2' fill='%23F43F5E' stroke='%231E293B' stroke-width='3'/%3E%3Cpolygon points='0,54 12,54 6,66' fill='%23FED7AA' stroke='%231E293B' stroke-width='3' stroke-linejoin='round'/%3E%3Cpolygon points='4,62 8,62 6,66' fill='%231E293B'/%3E%3C/g%3E%3Cpath d='M48 44 V35 C48 29 80 29 80 35 V44' fill='none' stroke='%23F59E0B' stroke-width='7' stroke-linecap='round'/%3E%3Crect x='22' y='44' width='84' height='62' rx='14' fill='%23D97706' stroke='%231E293B' stroke-width='3.5'/%3E%3Cpath d='M22 56 C22 48 28 44 36 44 H92 C100 44 106 48 106 56 V70 C106 76 100 80 92 80 H36 C28 80 22 76 22 70 Z' fill='%23F59E0B' stroke='%231E293B' stroke-width='3.5'/%3E%3Crect x='34' y='74' width='22' height='24' rx='5' fill='%23B45309' stroke='%231E293B' stroke-width='3'/%3E%3Crect x='72' y='74' width='22' height='24' rx='5' fill='%23B45309' stroke='%231E293B' stroke-width='3'/%3E%3Crect x='40' y='64' width='10' height='22' rx='3' fill='%23FEF3C7' stroke='%231E293B' stroke-width='2.5'/%3E%3Crect x='78' y='64' width='10' height='22' rx='3' fill='%23FEF3C7' stroke='%231E293B' stroke-width='2.5'/%3E%3Crect x='38' y='74' width='14' height='7' rx='2' fill='%2394A3B8' stroke='%231E293B' stroke-width='2'/%3E%3Crect x='76' y='74' width='14' height='7' rx='2' fill='%2394A3B8' stroke='%231E293B' stroke-width='2'/%3E%3C/svg%3E">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Crect width='128' height='128' rx='28' fill='%231B4332'/%3E%3Cg transform='translate(74, 16) rotate(18)'%3E%3Crect x='0' y='0' width='16' height='64' rx='3' fill='%23FBBF24' stroke='%231E293B' stroke-width='3'/%3E%3Cline x1='0' y1='12' x2='6' y2='12' stroke='%231E293B' stroke-width='2.5'/%3E%3Cline x1='0' y1='24' x2='9' y2='24' stroke='%231E293B' stroke-width='2.5'/%3E%3Cline x1='0' y1='36' x2='6' y2='36' stroke='%231E293B' stroke-width='2.5'/%3E%3Cline x1='0' y1='48' x2='9' y2='48' stroke='%231E293B' stroke-width='2.5'/%3E%3C/g%3E%3Cg transform='translate(28, 22) rotate(-22)'%3E%3Crect x='0' y='8' width='12' height='46' rx='2' fill='%23FDE047' stroke='%231E293B' stroke-width='3'/%3E%3Crect x='0' y='2' width='12' height='8' rx='2' fill='%23F43F5E' stroke='%231E293B' stroke-width='3'/%3E%3Cpolygon points='0,54 12,54 6,66' fill='%23FED7AA' stroke='%231E293B' stroke-width='3' stroke-linejoin='round'/%3E%3Cpolygon points='4,62 8,62 6,66' fill='%231E293B'/%3E%3C/g%3E%3Cpath d='M48 44 V35 C48 29 80 29 80 35 V44' fill='none' stroke='%23F59E0B' stroke-width='7' stroke-linecap='round'/%3E%3Crect x='22' y='44' width='84' height='62' rx='14' fill='%23D97706' stroke='%231E293B' stroke-width='3.5'/%3E%3Cpath d='M22 56 C22 48 28 44 36 44 H92 C100 44 106 48 106 56 V70 C106 76 100 80 92 80 H36 C28 80 22 76 22 70 Z' fill='%23F59E0B' stroke='%231E293B' stroke-width='3.5'/%3E%3Crect x='34' y='74' width='22' height='24' rx='5' fill='%23B45309' stroke='%231E293B' stroke-width='3'/%3E%3Crect x='72' y='74' width='22' height='24' rx='5' fill='%23B45309' stroke='%231E293B' stroke-width='3'/%3E%3Crect x='40' y='64' width='10' height='22' rx='3' fill='%23FEF3C7' stroke='%231E293B' stroke-width='2.5'/%3E%3Crect x='78' y='64' width='10' height='22' rx='3' fill='%23FEF3C7' stroke='%231E293B' stroke-width='2.5'/%3E%3Crect x='38' y='74' width='14' height='7' rx='2' fill='%2394A3B8' stroke='%231E293B' stroke-width='2'/%3E%3Crect x='76' y='74' width='14' height='7' rx='2' fill='%2394A3B8' stroke='%231E293B' stroke-width='2'/%3E%3C/svg%3E">
+    <link rel="manifest" href="manifest.webmanifest">
+
+    <!-- Chargement de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chargement des polices scolaires Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Patrick+Hand&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'display': ['Fredoka', 'sans-serif'],
+                        'hand': ['Patrick Hand', 'cursive'],
+                        'sans': ['Nunito', 'sans-serif'],
+                    },
+                    colors: {
+                        ardoise: '#1E293B',
+                        tableau: '#1B4332',
+                        craie: '#F8FAFC',
+                        surligneur: '#FEF08A',
+                        styloBleu: '#1D4ED8',
+                        styloRouge: '#DC2626',
+                        styloVert: '#15803D',
+                        seyesLigne: '#CBD5E1',
+                        seyesMarge: '#FCA5A5',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Motif subtil de cahier à carreaux Seyès pour l'arrière-plan de l'espace de travail */
+        .bg-seyes-workspace {
+            background-color: #f1f5f9;
+            background-image: 
+                linear-gradient(to right, rgba(148, 163, 184, 0.18) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(148, 163, 184, 0.18) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(59, 130, 246, 0.12) 1px, transparent 1px);
+            background-size: 32px 32px, 32px 32px, 32px 8px;
+        }
+
+        /* Simulation d'une feuille A4 réaliste à l'écran */
+        .a4-sheet {
+            width: 210mm;
+            min-height: 297mm;
+            background: white;
+            box-shadow: 0 20px 35px -10px rgba(15, 23, 42, 0.18), 0 0 1px 1px rgba(15, 23, 42, 0.06);
+            position: relative;
+            box-sizing: border-box;
+            padding: 14mm 16mm 16mm 22mm;
+            margin: 0 auto 2rem auto;
+            transition: transform 0.2s ease;
+        }
+
+        /* Marge rouge verticale façon cahier d'écolier sur la feuille A4 */
+        .a4-sheet::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 16mm;
+            width: 1.5px;
+            background-color: #fda4af;
+            pointer-events: none;
+        }
+
+        /* Perforations décoratives de classeur sur le bord gauche */
+        .binder-holes {
+            position: absolute;
+            left: 5mm;
+            top: 25mm;
+            bottom: 25mm;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            pointer-events: none;
+        }
+        .binder-hole {
+            width: 5mm;
+            height: 5mm;
+            border-radius: 50%;
+            background: #e2e8f0;
+            box-shadow: inset 0 1px 2px rgba(0,0,0,0.25);
+        }
+
+        /* Étiquette d'écolier */
+        .school-label {
+            border: 2px solid #1e293b;
+            border-radius: 10px;
+            background: linear-gradient(180deg, #eff6ff 0%, #ffffff 38%);
+            box-shadow: 3px 3px 0px #1e293b;
+        }
+
+        /* Zoom : l'échelle part du haut, sinon la feuille déborde / chevauche */
+        .zoom-wrapper {
+            transform-origin: top center;
+        }
+
+        /* =========================================================
+           RÈGLES D'IMPRESSION A4 STRICTES (@media print)
+           ========================================================= */
+        @media print {
+            @page {
+                size: A4 portrait;
+                margin: 0;
+            }
+            html, body {
+                width: 210mm;
+                background: white !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+            .no-print {
+                display: none !important;
+            }
+            .workspace-container {
+                padding: 0 !important;
+                margin: 0 !important;
+                background: none !important;
+                display: block !important;
+                overflow: visible !important;
+            }
+            .zoom-wrapper {
+                transform: none !important;
+                width: 100% !important;
+                margin: 0 !important;
+            }
+            .a4-sheet {
+                width: 210mm !important;
+                min-height: 296mm !important;
+                height: auto !important;
+                margin: 0 !important;
+                padding: 13mm 15mm 14mm 21mm !important;
+                box-shadow: none !important;
+                border: none !important;
+                page-break-after: always;
+                break-after: page;
+            }
+            .a4-sheet:last-child {
+                page-break-after: auto;
+                break-after: auto;
+            }
+            .binder-hole {
+                background: #f1f5f9 !important;
+                box-shadow: none !important;
+                border: 0.5pt solid #cbd5e1;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans text-slate-800 bg-seyes-workspace min-h-screen flex flex-col lg:flex-row">
+
+    <!-- =================================================================
+         PANNEAU DE CONFIGURATION LATÉRAL (MASQUÉ À L'IMPRESSION)
+         ================================================================= -->
+    <aside class="no-print w-full lg:w-[390px] xl:w-[420px] bg-white border-b lg:border-b-0 lg:border-r border-slate-200 shadow-xl z-20 flex flex-col shrink-0 lg:h-screen lg:sticky lg:top-0 overflow-y-auto">
+        
+        <!-- En-tête Tableau Noir / Ardoise avec l'icône sur mesure -->
+        <div class="bg-tableau text-white p-5 border-b-4 border-amber-600 relative overflow-hidden">
+            <div class="flex items-center justify-between gap-2 relative z-10">
+                <div class="flex items-center gap-3">
+                    <!-- Icône Cartable d'écolier avec crayon et règle -->
+                    <div class="w-14 h-14 rounded-2xl bg-emerald-950/60 border-2 border-amber-400/80 flex items-center justify-center shadow-lg transform -rotate-2 shrink-0 p-1">
+                        <svg class="w-full h-full" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" aria-label="Icône Cartable d'écolier">
+                            <!-- Règle graduée -->
+                            <g transform="translate(74, 14) rotate(18)">
+                                <rect x="0" y="0" width="16" height="64" rx="3" fill="#FBBF24" stroke="#1E293B" stroke-width="3"/>
+                                <line x1="0" y1="12" x2="6" y2="12" stroke="#1E293B" stroke-width="2.5"/>
+                                <line x1="0" y1="24" x2="9" y2="24" stroke="#1E293B" stroke-width="2.5"/>
+                                <line x1="0" y1="36" x2="6" y2="36" stroke="#1E293B" stroke-width="2.5"/>
+                                <line x1="0" y1="48" x2="9" y2="48" stroke="#1E293B" stroke-width="2.5"/>
+                            </g>
+                            <!-- Crayon à papier avec gomme -->
+                            <g transform="translate(26, 20) rotate(-22)">
+                                <rect x="0" y="8" width="12" height="46" rx="2" fill="#FDE047" stroke="#1E293B" stroke-width="3"/>
+                                <rect x="0" y="2" width="12" height="8" rx="2" fill="#F43F5E" stroke="#1E293B" stroke-width="3"/>
+                                <polygon points="0,54 12,54 6,66" fill="#FED7AA" stroke="#1E293B" stroke-width="3" stroke-linejoin="round"/>
+                                <polygon points="4,62 8,62 6,66" fill="#1E293B"/>
+                            </g>
+                            <!-- Poignée du cartable -->
+                            <path d="M48 44 V35 C48 29 80 29 80 35 V44" fill="none" stroke="#F59E0B" stroke-width="7" stroke-linecap="round"/>
+                            <!-- Corps du cartable -->
+                            <rect x="22" y="44" width="84" height="62" rx="14" fill="#D97706" stroke="#1E293B" stroke-width="3.5"/>
+                            <!-- Rabat du cartable -->
+                            <path d="M22 56 C22 48 28 44 36 44 H92 C100 44 106 48 106 56 V70 C106 76 100 80 92 80 H36 C28 80 22 76 22 70 Z" fill="#F59E0B" stroke="#1E293B" stroke-width="3.5"/>
+                            <!-- Poches avant -->
+                            <rect x="34" y="74" width="22" height="24" rx="5" fill="#B45309" stroke="#1E293B" stroke-width="3"/>
+                            <rect x="72" y="74" width="22" height="24" rx="5" fill="#B45309" stroke="#1E293B" stroke-width="3"/>
+                            <!-- Sangles & Boucles -->
+                            <rect x="40" y="64" width="10" height="22" rx="3" fill="#FEF3C7" stroke="#1E293B" stroke-width="2.5"/>
+                            <rect x="78" y="64" width="10" height="22" rx="3" fill="#FEF3C7" stroke="#1E293B" stroke-width="2.5"/>
+                            <rect x="38" y="74" width="14" height="7" rx="2" fill="#94A3B8" stroke="#1E293B" stroke-width="2"/>
+                            <rect x="76" y="74" width="14" height="7" rx="2" fill="#94A3B8" stroke="#1E293B" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h1 class="font-display text-xl sm:text-2xl font-bold tracking-wide text-amber-300 leading-tight">L'Atelier du Cartable</h1>
+                        <p class="text-xs text-emerald-100 font-medium">Fiches d'exercices • CP à 3ème</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bouton d'installation PWA / Raccourci Bureau -->
+            <div class="mt-3.5 pt-3 border-t border-emerald-800/80 flex items-center justify-between gap-2">
+                <span class="text-[11px] text-emerald-200/90 flex items-center gap-1.5">
+                    <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+                    Accès rapide sur le bureau :
+                </span>
+                <button type="button" id="install-desktop-btn" onclick="triggerDesktopInstall()" class="px-3 py-1.5 rounded-xl bg-amber-400 hover:bg-amber-300 active:scale-95 text-slate-900 font-bold text-xs shadow-sm transition flex items-center gap-1.5 cursor-pointer">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.3" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                    </svg>
+                    <span>Installer sur le bureau</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Formulaire de configuration -->
+        <div class="p-5 space-y-5 flex-1">
+
+            <!-- 1. Choix du Niveau Scolaire -->
+            <div>
+                <div class="flex items-center justify-between mb-2">
+                    <label class="text-xs font-extrabold uppercase tracking-wider text-slate-500 flex items-center gap-1.5">
+                        <span class="w-5 h-5 rounded-full bg-blue-100 text-blue-700 inline-flex items-center justify-center text-xs">1</span>
+                        Classe / Niveau scolaire
+                    </label>
+                    <span id="cycle-badge" class="text-[11px] font-bold px-2 py-0.5 rounded-full bg-blue-50 text-blue-700 border border-blue-200">Cycle 2 • Primaire</span>
+                </div>
+                <div id="grade-grid" class="grid grid-cols-3 gap-2">
+                    <!-- Généré dynamiquement par JS -->
+                </div>
+            </div>
+
+            <!-- 2. Choix de la Matière -->
+            <div>
+                <label class="text-xs font-extrabold uppercase tracking-wider text-slate-500 flex items-center gap-1.5 mb-2">
+                    <span class="w-5 h-5 rounded-full bg-amber-100 text-amber-800 inline-flex items-center justify-center text-xs">2</span>
+                    Matière & Module
+                </label>
+                <div class="grid grid-cols-2 gap-2" id="subject-grid">
+                    <button type="button" data-subject="maths" class="subject-btn p-2.5 rounded-xl border-2 text-left transition flex items-center gap-2.5">
+                        <span class="text-xl">📐</span>
+                        <div>
+                            <div class="font-bold text-sm leading-tight">Mathématiques</div>
+                            <div class="text-[11px] opacity-75">Calcul, problèmes...</div>
+                        </div>
+                    </button>
+                    <button type="button" data-subject="francais" class="subject-btn p-2.5 rounded-xl border-2 text-left transition flex items-center gap-2.5">
+                        <span class="text-xl">✒️</span>
+                        <div>
+                            <div class="font-bold text-sm leading-tight">Français</div>
+                            <div class="text-[11px] opacity-75">Conjugaison, accords...</div>
+                        </div>
+                    </button>
+                    <button type="button" data-subject="culture" class="subject-btn p-2.5 rounded-xl border-2 text-left transition flex items-center gap-2.5">
+                        <span class="text-xl">🌍</span>
+                        <div>
+                            <div class="font-bold text-sm leading-tight">Histoire-Géo & Sci.</div>
+                            <div class="text-[11px] opacity-75">Repères, logique...</div>
+                        </div>
+                    </button>
+                    <button type="button" data-subject="mixte" class="subject-btn p-2.5 rounded-xl border-2 text-left transition flex items-center gap-2.5">
+                        <span class="text-xl">🎒</span>
+                        <div>
+                            <div class="font-bold text-sm leading-tight">Fiche Multi-matières</div>
+                            <div class="text-[11px] opacity-75">Devoirs complets</div>
+                        </div>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 3. Difficulté & Nombre d'exercices -->
+            <div class="grid grid-cols-2 gap-3 bg-slate-50 p-3.5 rounded-2xl border border-slate-200/80">
+                <div>
+                    <label for="difficulty-select" class="block text-xs font-bold text-slate-600 mb-1">Difficulté</label>
+                    <select id="difficulty-select" class="w-full rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm font-semibold text-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <option value="decouverte">🌱 Découverte</option>
+                        <option value="entrainement" selected>⭐ Entraînement</option>
+                        <option value="defi">🚀 Défi / Expert</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="count-select" class="block text-xs font-bold text-slate-600 mb-1">Volume de la fiche</label>
+                    <select id="count-select" class="w-full rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm font-semibold text-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <option value="3">3 exercices (Court)</option>
+                        <option value="4" selected>4 exercices (Standard)</option>
+                        <option value="5">5 exercices (Complet)</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- 4. Personnalisation de l'en-tête élève -->
+            <div class="space-y-2.5">
+                <label class="text-xs font-extrabold uppercase tracking-wider text-slate-500 flex items-center gap-1.5">
+                    <span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-800 inline-flex items-center justify-center text-xs">3</span>
+                    Personnalisation de l'étiquette
+                </label>
+                <div class="grid grid-cols-2 gap-2.5">
+                    <div>
+                        <input type="text" id="student-name" placeholder="Prénom de l'élève (opt.)" class="w-full rounded-xl border border-slate-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" oninput="updateHeaderFields()">
+                    </div>
+                    <div>
+                        <input type="text" id="sheet-date" placeholder="Date (ex: Lundi 16 nov.)" class="w-full rounded-xl border border-slate-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" oninput="updateHeaderFields()">
+                    </div>
+                </div>
+                <input type="text" id="custom-title" placeholder="Titre personnalisé (ex: Devoirs du week-end)" class="w-full rounded-xl border border-slate-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" oninput="updateHeaderFields()">
+            </div>
+
+            <!-- Option Feuille de corrigé -->
+            <label class="flex items-center justify-between p-3 rounded-xl bg-amber-50/80 border border-amber-200 cursor-pointer hover:bg-amber-100/70 transition">
+                <div class="flex items-center gap-2.5">
+                    <span class="text-lg">✅</span>
+                    <div>
+                        <div class="text-sm font-bold text-slate-800">Inclure la feuille de corrigé</div>
+                        <div class="text-xs text-slate-500">Génère une 2ème page A4 avec les réponses</div>
+                    </div>
+                </div>
+                <input type="checkbox" id="toggle-answers" checked class="w-5 h-5 rounded text-blue-600 focus:ring-blue-500 cursor-pointer" onchange="toggleAnswerSheet()">
+            </label>
+
+        </div>
+
+        <!-- Boutons d'action principaux -->
+        <div class="p-4 bg-slate-50 border-t border-slate-200 space-y-2.5 sticky bottom-0">
+            <!-- Indicateur de variété / Anti-doublon -->
+            <div class="flex items-center justify-between text-[11px] text-slate-500 px-1">
+                <span class="flex items-center gap-1.5 font-semibold">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                    <span id="variety-counter">0 question inédite générée</span>
+                </span>
+                <button type="button" onclick="resetAntiRepeatHistory()" class="text-blue-600 hover:text-blue-800 underline font-semibold cursor-pointer" title="Vider la mémoire des exercices déjà tirés">
+                    Réinitialiser la pioche
+                </button>
+            </div>
+
+            <button type="button" onclick="generateWorksheet()" class="w-full py-3 px-4 rounded-xl bg-blue-600 hover:bg-blue-700 active:scale-[0.99] text-white font-display font-semibold text-base shadow-md shadow-blue-600/20 transition flex items-center justify-center gap-2">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.3" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                </svg>
+                Générer de nouveaux exercices
+            </button>
+        </div>
+    </aside>
+
+    <!-- =================================================================
+         ESPACE DE TRAVAIL : PRÉVISUALISATION + IMPRESSION
+         ================================================================= -->
+    <main class="workspace-container flex-1 overflow-y-auto p-4 sm:p-6 lg:p-8 min-w-0">
+        <!-- Barre d'outils : zoom + impression (masquée à l'impression) -->
+        <div class="no-print max-w-[210mm] mx-auto mb-4 flex flex-wrap items-center justify-between gap-3 bg-white rounded-2xl border border-slate-200 shadow-sm px-4 py-3">
+            <div class="flex items-center gap-2">
+                <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Aperçu</span>
+                <button type="button" onclick="adjustZoom(-0.1)" class="px-3 py-1.5 rounded-lg border border-slate-300 bg-white hover:bg-slate-50 font-bold text-sm" aria-label="Réduire le zoom">−</button>
+                <span id="zoom-label" class="text-sm font-bold text-slate-700 w-12 text-center" aria-live="polite">100%</span>
+                <button type="button" onclick="adjustZoom(0.1)" class="px-3 py-1.5 rounded-lg border border-slate-300 bg-white hover:bg-slate-50 font-bold text-sm" aria-label="Agrandir le zoom">+</button>
+                <button type="button" onclick="resetZoom()" class="px-3 py-1.5 rounded-lg border border-slate-300 bg-white hover:bg-slate-50 font-semibold text-xs">Ajuster à l'écran</button>
+            </div>
+            <button type="button" onclick="window.print()" class="px-4 py-2 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white font-display font-bold text-sm shadow-sm flex items-center gap-2">
+                🖨️ Imprimer / PDF
+            </button>
+        </div>
+
+        <div id="zoom-wrapper" class="zoom-wrapper mx-auto" style="width:210mm; max-width:100%;">
+            <!-- FEUILLE 1 : FICHE ÉLÈVE -->
+            <section class="a4-sheet" aria-label="Fiche d'exercices pour l'élève">
+                <div class="binder-holes" aria-hidden="true"><span class="binder-hole"></span><span class="binder-hole"></span><span class="binder-hole"></span></div>
+                <header class="mb-4">
+                    <div class="school-label px-4 py-3 flex flex-wrap items-center justify-between gap-2">
+                        <div>
+                            <div class="text-[11px] font-bold uppercase tracking-wider text-slate-500">Nom : <span id="display-student-name" class="text-slate-900 normal-case tracking-normal"></span></div>
+                            <div class="text-[11px] font-bold uppercase tracking-wider text-slate-500">Date : <span id="display-sheet-date" class="text-slate-900 normal-case tracking-normal"></span></div>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-[11px] font-bold uppercase tracking-wider text-slate-500">Matière</div>
+                            <div class="text-xs font-bold text-slate-900"><span id="sheet-grade-pill"></span> • <span id="sheet-subject-pill"></span> <span id="sheet-diff-pill"></span></div>
+                            <div id="sheet-ref-code" class="text-[10px] text-slate-400 font-mono"></div>
+                        </div>
+                    </div>
+                    <h2 id="sheet-main-title" class="font-display font-bold text-2xl text-slate-900 text-center mt-4">Fiche d'exercices et de révisions</h2>
+                    <p class="text-center text-xs text-slate-500 mt-1">Lis chaque consigne, écris proprement, vérifie avec le corrigé.</p>
+                </header>
+                <div id="exercises-container" class="space-y-4"></div>
+                <footer class="mt-6 pt-3 border-t border-slate-200 flex items-center justify-between text-[10px] text-slate-400">
+                    <span>L'Atelier du Cartable</span>
+                    <span>Bon courage ! ✏️</span>
+                </footer>
+            </section>
+
+            <!-- FEUILLE 2 : CORRIGÉ -->
+            <section id="answer-sheet" class="a4-sheet" aria-label="Feuille de corrigé">
+                <div class="binder-holes" aria-hidden="true"><span class="binder-hole"></span><span class="binder-hole"></span><span class="binder-hole"></span></div>
+                <header class="mb-4">
+                    <div class="flex items-center justify-between gap-2">
+                        <h2 class="font-display font-bold text-xl text-emerald-900">✅ Corrigé — Réservé à l'adulte</h2>
+                        <span id="answer-ref-code" class="text-[10px] text-slate-400 font-mono"></span>
+                    </div>
+                    <p class="text-xs text-slate-600 mt-1"><span id="answer-grade-title"></span> • <span id="answer-subject-title"></span></p>
+                    <hr class="mt-3 border-emerald-200">
+                </header>
+                <div id="answers-container" class="space-y-3"></div>
+            </section>
+        </div>
+    </main>
+
+    <script>
+
+        // --- 1. ÉTAT GLOBAL, RÉFÉRENTIELS & PWA (était manquant : tout le JS plantait) ---
+        const state = { grade: 'ce2', subject: 'maths', difficulty: 'entrainement', count: 4, zoom: 1, manualZoom: false };
+
+        const GRADES = [
+            { id: 'cp', label: 'CP', cycle: 'Cycle 2 • Primaire' },
+            { id: 'ce1', label: 'CE1', cycle: 'Cycle 2 • Primaire' },
+            { id: 'ce2', label: 'CE2', cycle: 'Cycle 2 • Primaire' },
+            { id: 'cm1', label: 'CM1', cycle: 'Cycle 3 • Primaire' },
+            { id: 'cm2', label: 'CM2', cycle: 'Cycle 3 • Primaire' },
+            { id: '6eme', label: '6ème', cycle: 'Cycle 3 • Collège' },
+            { id: '5eme', label: '5ème', cycle: 'Cycle 4 • Collège' },
+            { id: '4eme', label: '4ème', cycle: 'Cycle 4 • Collège' },
+            { id: '3eme', label: '3ème', cycle: 'Cycle 4 • Collège' }
+        ];
+
+        const SUBJECT_LABELS = { maths: 'Mathématiques', francais: 'Français', culture: 'Histoire-Géo & Sciences', mixte: 'Fiche Multi-matières' };
+        const DIFFICULTY_LABELS = { decouverte: 'Découverte', entrainement: 'Entraînement', defi: 'Défi / Expert' };
+
+        // Échappe le HTML avant tout innerHTML : un '<' dans un corrigé ne doit pas casser le rendu.
+        function escapeHtml(str) {
+            return String(str ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+        }
+
+        // --- PWA pour PWABuilder : manifest réel + service worker ---
+        // Aucune autre modification : tout le reste de l'app est identique à la version corrigée.
+        let deferredPrompt = null;
+        function isIOS() { return /iphone|ipad|ipod/i.test(navigator.userAgent) && !window.MSStream; }
+        function isInStandalone() { return window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true; }
+        function initPWAManifest() {
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.register('./sw.js', { scope: './' }).catch(function(e) { console.log('SW non dispo :', e); });
+            }
+            window.addEventListener('beforeinstallprompt', function(e) { e.preventDefault(); deferredPrompt = e; });
+            window.addEventListener('appinstalled', function() { deferredPrompt = null; });
+            if (isInStandalone()) { var b = document.getElementById('install-desktop-btn'); if (b) b.style.display = 'none'; }
+        }
+        function triggerDesktopInstall() {
+            if (isInStandalone()) { alert("Deja installee !"); return; }
+            if (deferredPrompt) { deferredPrompt.prompt(); deferredPrompt.userChoice.then(function() { deferredPrompt = null; }); return; }
+            if (isIOS()) { alert("Sur iPhone / iPad :\n\n1) Partager en bas de Safari\n2) Sur l'ecran d'accueil\n3) Ajouter"); return; }
+            alert("Pour installer :\n\nSur ordinateur (Chrome / Edge) : icone Installer dans la barre d'adresse, ou Menu > Installer.\nSur Android (Chrome) : Menu > Installer l'application.\n\nSi tu ne vois pas le bouton, c'est que la page est ouverte en file://. Il faut l'heberger en HTTPS (voir README).");
+        }
+
+        // --- 2. UTILITAIRES ALÉATOIRES & SYSTÈME ANTI-DOUBLON (PIOCHE SANS REMISE) ---
+        const randInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+        const pick = (arr) => arr[Math.floor(Math.random() * arr.length)];
+        const shuffle = (arr) => {
+            const copy = [...arr];
+            for (let i = copy.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [copy[i], copy[j]] = [copy[j], copy[i]];
+            }
+            return copy;
+        };
+        const diffMultiplier = () => state.difficulty === 'decouverte' ? 0.7 : (state.difficulty === 'defi' ? 1.5 : 1);
+
+        // Gestionnaire de mémoire de session : évite toute répétition entre deux clics sur "Générer"
+        const SessionMemory = {
+            decks: {},          // Pioches mélangées par clé de catégorie
+            seenSignatures: new Set(), // Empreintes d'exercices dynamiques déjà générés
+            totalGenerated: 0,
+
+            // Pioche N éléments sans remise dans une liste ; remélange automatiquement une fois la pioche vide
+            draw(deckKey, sourceArray, count) {
+                if (!Array.isArray(sourceArray) || sourceArray.length === 0) return [];
+                if (!this.decks[deckKey] || this.decks[deckKey].length === 0) {
+                    this.decks[deckKey] = shuffle(sourceArray);
+                }
+                const result = [];
+                while (result.length < count) {
+                    if (this.decks[deckKey].length === 0) {
+                        this.decks[deckKey] = shuffle(sourceArray);
+                    }
+                    const candidate = this.decks[deckKey].pop();
+                    // Évite un doublon au sein du même bloc si la banque est plus grande que count
+                    if (!result.includes(candidate) || sourceArray.length < count) {
+                        result.push(candidate);
+                    }
+                }
+                return result;
+            },
+
+            // Génère un exercice mathématique unique en vérifiant son empreinte
+            uniqueMath(category, generatorFn, maxAttempts = 40) {
+                for (let attempt = 0; attempt < maxAttempts; attempt++) {
+                    const item = generatorFn();
+                    const sig = `${state.grade}:${category}:${Array.isArray(item) ? JSON.stringify(item) : item.q}`;
+                    if (!this.seenSignatures.has(sig)) {
+                        this.seenSignatures.add(sig);
+                        return item;
+                    }
+                }
+                return generatorFn();
+            },
+
+            reset() {
+                this.decks = {};
+                this.seenSignatures.clear();
+                this.totalGenerated = 0;
+            }
+        };
+
+        function resetAntiRepeatHistory() {
+            SessionMemory.reset();
+            generateWorksheet();
+        }
+
+        function updateVarietyCounter(addedCount) {
+            SessionMemory.totalGenerated += addedCount;
+            const el = document.getElementById('variety-counter');
+            if (el) {
+                el.textContent = `${SessionMemory.totalGenerated} questions inédites générées`;
+            }
+        }
+
+        // --- 3. BANQUES DE DONNÉES & MOTEURS COMBINATOIRES (FRANÇAIS, MATHS & CULTURE) ---
+        const PRENOMS = ["Léo", "Inès", "Noah", "Emma", "Yanis", "Chloé", "Lucas", "Sarah", "Adam", "Léa", "Hugo", "Manon", "Gabriel", "Jade", "Raphaël", "Camille", "Arthur", "Zoé", "Liam", "Lina", "Mathis", "Alice", "Nathan", "Eva"];
+
+        // Moteur combinatoire de conjugaison (croise verbes × pronoms × temps)
+        const CONJ_ENGINE = {
+            pronoms: [
+                { label: "Je", idx: 0, elision: "J'" },
+                { label: "Tu", idx: 1 },
+                { label: "Il", idx: 2 },
+                { label: "Elle", idx: 2 },
+                { label: "Nous", idx: 3 },
+                { label: "Vous", idx: 4 },
+                { label: "Ils", idx: 5 },
+                { label: "Elles", idx: 5 }
+            ],
+            verbes: {
+                chanter: { inf: "chanter", voyelle: false, present: ["chante","chantes","chante","chantons","chantez","chantent"], futur: ["chanterai","chanteras","chantera","chanterons","chanterez","chanteront"], imparfait: ["chantais","chantais","chantait","chantions","chantiez","chantaient"], passe_simple: ["chantai","chantas","chanta","chantâmes","chantâtes","chantèrent"], passe_compose: ["ai chanté","as chanté","a chanté","avons chanté","avez chanté","ont chanté"] },
+                jouer: { inf: "jouer", voyelle: false, present: ["joue","joues","joue","jouons","jouez","jouent"], futur: ["jouerai","joueras","jouera","jouerons","jouerez","joueront"], imparfait: ["jouais","jouais","jouait","jouions","jouiez","jouaient"], passe_simple: ["jouai","jouas","joua","jouâmes","jouâtes","jouèrent"], passe_compose: ["ai joué","as joué","a joué","avons joué","avez joué","ont joué"] },
+                manger: { inf: "manger", voyelle: false, present: ["mange","manges","mange","mangeons","mangez","mangent"], futur: ["mangerai","mangeras","mangera","mangerons","mangerez","mangeront"], imparfait: ["mangeais","mangeais","mangeait","mangions","mangiez","mangeaient"], passe_simple: ["mangeai","mangeas","mangea","mangeâmes","mangeâtes","mangèrent"], passe_compose: ["ai mangé","as mangé","a mangé","avons mangé","avez mangé","ont mangé"] },
+                lancer: { inf: "lancer", voyelle: false, present: ["lance","lances","lance","lançons","lancez","lancent"], futur: ["lancerai","lanceras","lancera","lancerons","lancerez","lanceront"], imparfait: ["lançais","lançais","lançait","lancions","lanciez","lançaient"], passe_simple: ["lançai","lanças","lança","lançâmes","lançâtes","lancèrent"], passe_compose: ["ai lancé","as lancé","a lancé","avons lancé","avez lancé","ont lancé"] },
+                finir: { inf: "finir", voyelle: false, present: ["finis","finis","finit","finissons","finissez","finissent"], futur: ["finirai","finiras","finira","finirons","finirez","finiront"], imparfait: ["finissais","finissais","finissait","finissions","finissiez","finissaient"], passe_simple: ["finis","finis","finit","finîmes","finîtes","finirent"], passe_compose: ["ai fini","as fini","a fini","avons fini","avez fini","ont fini"] },
+                choisir: { inf: "choisir", voyelle: false, present: ["choisis","choisis","choisit","choisissons","choisissez","choisissent"], futur: ["choisirai","choisiras","choisira","choisirons","choisirez","choisiront"], imparfait: ["choisissais","choisissais","choisissait","choisissions","choisissiez","choisissaient"], passe_simple: ["choisis","choisis","choisit","choisîmes","choisîtes","choisirent"] },
+                etre: { inf: "être", voyelle: true, present: ["suis","es","est","sommes","êtes","sont"], futur: ["serai","seras","sera","serons","serez","seront"], imparfait: ["étais","étais","était","étions","étiez","étaient"], passe_simple: ["fus","fus","fut","fûmes","fûtes","furent"], subjonctif: ["sois","sois","soit","soyons","soyez","soient"], conditionnel: ["serais","serais","serait","serions","seriez","seraient"] },
+                avoir: { inf: "avoir", voyelle: true, present: ["ai","as","a","avons","avez","ont"], futur: ["aurai","auras","aura","aurons","aurez","auront"], imparfait: ["avais","avais","avait","avions","aviez","avaient"], passe_simple: ["eus","eus","eut","eûmes","eûtes","eurent"], subjonctif: ["aie","aies","ait","ayons","ayez","aient"], conditionnel: ["aurais","aurais","aurait","aurions","auriez","auraient"] },
+                aller: { inf: "aller", voyelle: true, present: ["vais","vas","va","allons","allez","vont"], futur: ["irai","iras","ira","irons","irez","iront"], imparfait: ["allais","allais","allait","allions","alliez","allaient"], passe_simple: ["allai","allas","alla","allâmes","allâtes","allèrent"], subjonctif: ["aille","ailles","aille","allions","alliez","aillent"], conditionnel: ["irais","irais","irait","irions","iriez","iraient"] },
+                faire: { inf: "faire", voyelle: false, present: ["fais","fais","fait","faisons","faites","font"], futur: ["ferai","feras","fera","ferons","ferez","feront"], imparfait: ["faisais","faisais","faisait","faisions","faisiez","faisaient"], passe_simple: ["fis","fis","fit","fîmes","fîtes","firent"], subjonctif: ["fasse","fasses","fasse","fassions","fassiez","fassent"], conditionnel: ["ferais","ferais","ferait","ferions","feriez","feraient"] },
+                dire: { inf: "dire", voyelle: false, present: ["dis","dis","dit","disons","dites","disent"], futur: ["dirai","diras","dira","dirons","direz","diront"], imparfait: ["disais","disais","disait","disions","disiez","disaient"], passe_simple: ["dis","dis","dit","dîmes","dîtes","dirent"] },
+                prendre: { inf: "prendre", voyelle: false, present: ["prends","prends","prend","prenons","prenez","prennent"], futur: ["prendrai","prendras","prendra","prendrons","prendrez","prendront"], imparfait: ["prenais","prenais","prenait","prenions","preniez","prenaient"], passe_simple: ["pris","pris","prit","prîmes","prîtes","prirent"], subjonctif: ["prenne","prennes","prenne","prenions","preniez","prennent"] },
+                venir: { inf: "venir", voyelle: false, present: ["viens","viens","vient","venons","venez","viennent"], futur: ["viendrai","viendras","viendra","viendrons","viendrez","viendront"], imparfait: ["venais","venais","venait","venions","veniez","venaient"], passe_simple: ["vins","vins","vint","vînmes","vîntes","vinrent"], subjonctif: ["vienne","viennes","vienne","venions","veniez","viennent"] },
+                pouvoir: { inf: "pouvoir", voyelle: false, present: ["peux","peux","peut","pouvons","pouvez","peuvent"], futur: ["pourrai","pourras","pourra","pourrons","pourrez","pourront"], imparfait: ["pouvais","pouvais","pouvait","pouvions","pouviez","pouvaient"], passe_simple: ["pus","pus","put","pûmes","pûtes","purent"], subjonctif: ["puisse","puisses","puisse","puissions","puissiez","puissent"], conditionnel: ["pourrais","pourrais","pourrait","pourrions","pourriez","pourraient"] },
+                vouloir: { inf: "vouloir", voyelle: false, present: ["veux","veux","veut","voulons","voulez","veulent"], futur: ["voudrai","voudras","voudra","voudrons","voudrez","voudront"], imparfait: ["voulais","voulais","voulait","voulions","vouliez","voulaient"], passe_simple: ["voulus","voulus","voulut","voulûmes","voulûtes","voulurent"], subjonctif: ["veuille","veuilles","veuille","voulions","vouliez","veuillent"], conditionnel: ["voudrais","voudrais","voudrait","voudrions","voudriez","voudraient"] },
+                savoir: { inf: "savoir", voyelle: false, present: ["sais","sais","sait","savons","savez","savent"], futur: ["saurai","sauras","saura","saurons","saurez","sauront"], imparfait: ["savais","savais","savait","savions","saviez","savaient"], passe_simple: ["sus","sus","sut","sûmes","sûtes","surent"], subjonctif: ["sache","saches","sache","sachions","sachiez","sachent"], conditionnel: ["saurais","saurais","saurait","saurions","sauriez","sauraient"] },
+                voir: { inf: "voir", voyelle: false, present: ["vois","vois","voit","voyons","voyez","voient"], futur: ["verrai","verras","verra","verrons","verrez","verront"], imparfait: ["voyais","voyais","voyait","voyions","voyiez","voyaient"], passe_simple: ["vis","vis","vit","vîmes","vîtes","virent"] }
+            },
+            tenseLabels: {
+                present: "présent",
+                futur: "futur",
+                imparfait: "imparfait",
+                passe_simple: "passé simple",
+                passe_compose: "passé composé",
+                subjonctif: "subjonctif présent",
+                conditionnel: "conditionnel présent"
+            },
+            buildPool(grade) {
+                let verbKeys, tenses;
+                if (['cp', 'ce1'].includes(grade)) {
+                    verbKeys = ['chanter', 'jouer', 'manger', 'finir', 'etre', 'avoir', 'aller'];
+                    tenses = grade === 'cp' ? ['present'] : ['present', 'futur', 'imparfait'];
+                } else if (['ce2', 'cm1'].includes(grade)) {
+                    verbKeys = ['manger', 'lancer', 'choisir', 'faire', 'dire', 'prendre', 'venir', 'pouvoir', 'voir'];
+                    tenses = ['present', 'futur', 'imparfait', 'passe_compose'];
+                } else if (['cm2', '6eme'].includes(grade)) {
+                    verbKeys = ['etre', 'avoir', 'aller', 'faire', 'prendre', 'venir', 'pouvoir', 'vouloir', 'savoir', 'voir', 'finir'];
+                    tenses = ['present', 'futur', 'imparfait', 'passe_simple'];
+                } else {
+                    verbKeys = ['etre', 'avoir', 'aller', 'faire', 'prendre', 'venir', 'pouvoir', 'vouloir', 'savoir'];
+                    tenses = ['passe_simple', 'subjonctif', 'conditionnel'];
+                }
+
+                const combinations = [];
+                verbKeys.forEach(vk => {
+                    const vObj = this.verbes[vk];
+                    tenses.forEach(tKey => {
+                        if (!vObj[tKey]) return;
+                        this.pronoms.forEach(p => {
+                            const form = vObj[tKey][p.idx];
+                            const startsVowel = /^[aeiouhéèêàâîïôûù]/i.test(form);
+                            const pronDisplay = (p.idx === 0 && startsVowel) ? "J'" : p.label + " ";
+                            const prefix = tKey === 'subjonctif' ? `Il faut que ${pronDisplay.toLowerCase()}` : pronDisplay;
+                            combinations.push({
+                                q: `[${this.tenseLabels[tKey]}] ${prefix}(${vObj.inf}) ..........................`,
+                                a: `${prefix}${form}`
+                            });
+                        });
+                    });
+                });
+                return combinations;
+            }
+        };
+
+        // Moteur combinatoire d'accords dans le Groupe Nominal (Déterminant + Nom + Adjectif)
+        const GN_ENGINE = {
+            noms: [
+                { ms: "un chat", mp: "des chats", fs: "une chatte", fp: "des chattes" },
+                { ms: "un lion", mp: "des lions", fs: "une lionne", fp: "des lionnes" },
+                { ms: "un acteur", mp: "des acteurs", fs: "une actrice", fp: "des actrices" },
+                { ms: "un voisin", mp: "des voisins", fs: "une voisine", fp: "des voisines" },
+                { ms: "un chanteur", mp: "des chanteurs", fs: "une chanteuse", fp: "des chanteuses" },
+                { ms: "un sportif", mp: "des sportifs", fs: "une sportive", fp: "des sportives" },
+                { ms: "un boulanger", mp: "des boulangers", fs: "une boulangère", fp: "des boulangères" },
+                { ms: "un cheval", mp: "des chevaux", fs: "une jument", fp: "des juments" },
+                { ms: "un magicien", mp: "des magiciens", fs: "une magicienne", fp: "des magiciennes" },
+                { ms: "un directeur", mp: "des directeurs", fs: "une directrice", fp: "des directrices" }
+            ],
+            adjectifs: [
+                { base: "courageux", ms: "courageux", mp: "courageux", fs: "courageuse", fp: "courageuses" },
+                { base: "attentif", ms: "attentif", mp: "attentifs", fs: "attentive", fp: "attentives" },
+                { base: "joyeux", ms: "joyeux", mp: "joyeux", fs: "joyeuse", fp: "joyeuses" },
+                { base: "gentil", ms: "gentil", mp: "gentils", fs: "gentille", fp: "gentilles" },
+                { base: "curieux", ms: "curieux", mp: "curieux", fs: "curieuse", fp: "curieuses" },
+                { base: "fier", ms: "fier", mp: "fiers", fs: "fière", fp: "fières" },
+                { base: "doux", ms: "doux", mp: "doux", fs: "douce", fp: "douces" },
+                { base: "ancien", ms: "ancien", mp: "anciens", fs: "ancienne", fp: "anciennes" },
+                { base: "bleu", ms: "bleu", mp: "bleus", fs: "bleue", fp: "bleues" },
+                { base: "actif", ms: "actif", mp: "actifs", fs: "active", fp: "actives" }
+            ],
+            buildPool() {
+                const genres = ['mp', 'fs', 'fp'];
+                const pool = [];
+                this.noms.forEach(n => {
+                    this.adjectifs.forEach(adj => {
+                        genres.forEach(g => {
+                            pool.push({
+                                q: `Accorde : ${n[g]} (${adj.base}) ............................`,
+                                a: `${n[g]} ${adj[g]}`
+                            });
+                        });
+                    });
+                });
+                return pool;
+            }
+        };
+
+        const DB = {
+            sonsCP: [
+                { mot: "un b_teau (a / o)", rep: "a (un bateau)" },
+                { mot: "une m_son (ai / oi)", rep: "ai (une maison)" },
+                { mot: "un ch_val (e / u)", rep: "e (un cheval)" },
+                { mot: "une t_tue (or / ar)", rep: "or (une tortue)" },
+                { mot: "un p_sson (oi / ou)", rep: "oi (un poisson)" },
+                { mot: "une p_mme (o / a)", rep: "o (une pomme)" },
+                { mot: "un l_pin (a / i)", rep: "a (un lapin)" },
+                { mot: "une _toile (é / u)", rep: "é (une étoile)" },
+                { mot: "un m_ton (ou / on)", rep: "ou (un mouton)" },
+                { mot: "une fl_r (eu / ou)", rep: "eu (une fleur)" },
+                { mot: "un _lephant (é / a)", rep: "é (un éléphant)" },
+                { mot: "une v_ture (oi / ou)", rep: "oi (une voiture)" },
+                { mot: "un s_leil (o / u)", rep: "o (un soleil)" },
+                { mot: "une b_nane (a / e)", rep: "a (une banane)" },
+                { mot: "un ch_peau (a / o)", rep: "a (un chapeau)" },
+                { mot: "une f_nêtre (e / i)", rep: "e (une fenêtre)" },
+                { mot: "un p_pillon (a / u)", rep: "a (un papillon)" },
+                { mot: "une cr_yon (a / e)", rep: "a (un crayon)" }
+            ],
+            orthographe: {
+                primaire: [
+                    { q: "Choisis entre (a / à) : Il ___ mal ___ la tête.", rep: "a / à" },
+                    { q: "Choisis entre (et / est) : Léa ___ grande ___ sportive.", rep: "est / et" },
+                    { q: "Choisis entre (son / sont) : Les chats ___ sur ___ coussin.", rep: "sont / son" },
+                    { q: "Choisis entre (on / ont) : ___ dirait qu'ils ___ terminé.", rep: "On / ont" },
+                    { q: "Choisis entre (ces / ses) : Paul a rangé ___ affaires dans ___ tiroirs.", rep: "ses / ces" },
+                    { q: "Choisis entre (ou / où) : Tu préfères le train ___ l'avion pour aller ___ tu veux ?", rep: "ou / où" },
+                    { q: "Choisis entre (ce / se) : ___ matin, l'élève ___ dépêche.", rep: "Ce / se" },
+                    { q: "Accorde le verbe : Les oiseaux (chanter) ______________ dans le jardin.", rep: "chantent" },
+                    { q: "Accorde le verbe : Mes parents (préparer) ______________ le dîner.", rep: "préparent" },
+                    { q: "Accorde le verbe : Tu (regarder) ______________ les étoiles.", rep: "regardes" },
+                    { q: "Mets au pluriel : un journal intéressant → des ________________________", rep: "journaux intéressants" },
+                    { q: "Mets au pluriel : un bijou précieux → des ________________________", rep: "bijoux précieux" },
+                    { q: "Mets au pluriel : un travail difficile → des ________________________", rep: "travaux difficiles" },
+                    { q: "Mets au féminin : un boulanger matinal → une ________________________", rep: "boulangère matinale" }
+                ],
+                college: [
+                    { q: "Accorde le participe passé : Les lettres qu'elle a (écrire) ______________ sont longues.", rep: "écrites (COD 'que' placé avant)" },
+                    { q: "Choisis (leur / leurs) : Je ___ ai rendu ___ cahiers corrigés.", rep: "leur / leurs" },
+                    { q: "Accorde : Elles se sont (laver) ______________ les mains avant le repas.", rep: "lavé (COD 'les mains' après)" },
+                    { q: "Accorde : Elles se sont (apercevoir) ______________ de leur erreur.", rep: "aperçues (verbe essentiellement pronominal)" },
+                    { q: "Choisis (quel / quelle / qu'elle) : ___ chance ___ soit venue !", rep: "Quelle / qu'elle" },
+                    { q: "Accorde le participe passé : Les efforts que ce projet a (coûter) ______________.", rep: "coûté (verbe valoir/coûter invariable)" },
+                    { q: "Orthographe lexicale : Un (acceuil / accueil) chaleureux et un (évènement / événement) réussi.", rep: "accueil / événement" },
+                    { q: "Choisis (tout / tous / toute) : Elles sont ___ émues par cette histoire.", rep: "tout (adverbe devant adjectif féminin commençant par voyelle)" },
+                    { q: "Choisis (quoique / quoi que) : ___ tu fasses, reste concentré.", rep: "Quoi que (= quelle que soit la chose que)" },
+                    { q: "Choisis (plutôt / plus tôt) : Il est arrivé ___ que prévu, ___ satisfait.", rep: "plus tôt / plutôt" },
+                    { q: "Accorde : Les fleurs que j'ai (cueillir) ______________ ce matin sentent bon.", rep: "cueillies (COD 'que' placé avant)" },
+                    { q: "Choisis (ces / ses / c'est / s'est) : ___ lui qui ___ trompé dans ___ calculs.", rep: "C'est / s'est / ses" }
+                ]
+            },
+            grammaire: {
+                primaire: [
+                    { q: "Souligne le verbe et entoure le sujet : « Le petit chien noir court dans le parc. »", rep: "Sujet : Le petit chien noir | Verbe : court" },
+                    { q: "Donne la nature des mots en gras : « Une **belle** **maison** **rouge**. »", rep: "belle (adjectif), maison (nom commun), rouge (adjectif)" },
+                    { q: "Transforme à la forme négative : « Léo mange toujours sa soupe. »", rep: "Léo ne mange jamais sa soupe." },
+                    { q: "Transforme à la forme négative : « Quelqu'un frappe encore à la porte. »", rep: "Personne ne frappe plus à la porte." },
+                    { q: "Indique le type de phrase : « Range immédiatement ta chambre ! »", rep: "Phrase injonctive (ou impérative)" },
+                    { q: "Indique le type de phrase : « Quelle magnifique journée ensoleillée ! »", rep: "Phrase exclamative" },
+                    { q: "Identifie le COD : « Ma sœur prépare un gâteau au chocolat. »", rep: "COD : un gâteau au chocolat" },
+                    { q: "Identifie le COI : « Les enfants parlent de leurs vacances. »", rep: "COI : de leurs vacances" },
+                    { q: "Remplace le groupe en gras par un pronom : « **Paul et Marie** regardent le film. »", rep: "Ils regardent le film." },
+                    { q: "Remplace le groupe en gras par un pronom : « Léa offre **des fleurs** à sa mère. »", rep: "Léa en offre à sa mère / Léa les offre..." },
+                    { q: "Identifie le complément circonstanciel : « Demain matin, nous irons à la piscine. »", rep: "Demain matin (CCT) / à la piscine (CCL)" },
+                    { q: "Donne l'infinitif et le groupe du verbe : « Nous finissons nos devoirs. »", rep: "finir (2ème groupe)" }
+                ],
+                college: [
+                    { q: "Identifie la figure de style : « Cette obscure clarté qui tombe des étoiles. » (Corneille)", rep: "Oxymore" },
+                    { q: "Identifie la figure de style : « Je meurs de soif devant cette fontaine. »", rep: "Hyperbole" },
+                    { q: "Identifie la figure de style : « La mer était un immense miroir d'argent. »", rep: "Métaphore" },
+                    { q: "Identifie la figure de style : « Ses yeux brillaient comme deux diamants. »", rep: "Comparaison (outil : comme)" },
+                    { q: "Identifie la figure de style : « Le vent hurlait sa colère dans les arbres. »", rep: "Personnification" },
+                    { q: "Identifie la figure de style : « Il nous a quittés hier soir. » (pour dire il est mort)", rep: "Euphémisme" },
+                    { q: "Nature de la proposition subordonnée : « Le livre **que tu m'as prêté** est passionnant. »", rep: "Proposition subordonnée relative (introduite par 'que')" },
+                    { q: "Nature de la proposition subordonnée : « Je pense **qu'il réussira son examen**. »", rep: "Proposition subordonnée conjonctive complétive" },
+                    { q: "Transforme à la voix passive : « Le jury récompensera les meilleurs candidats. »", rep: "Les meilleurs candidats seront récompensés par le jury." },
+                    { q: "Transforme à la voix active : « La décision a été prise par le conseil. »", rep: "Le conseil a pris la décision." },
+                    { q: "Valeur du présent : « La Terre tourne autour du Soleil. »", rep: "Présent de vérité générale" },
+                    { q: "Valeur de l'imparfait : « Chaque été, nous partions chez nos grands-parents. »", rep: "Imparfait d'habitude (ou de répétition)" },
+                    { q: "Fonction du groupe en gras : « Il tremble **de peur** devant la porte. »", rep: "Complément circonstanciel de cause" },
+                    { q: "Fonction du groupe en gras : « Ce roman a été écrit **par Victor Hugo**. »", rep: "Complément d'agent" }
+                ]
+            },
+            vocabulairePrimaire: [
+                { q: "Contraire de « courageux » : ............................", a: "peureux / lâche" },
+                { q: "Synonyme de « minuscule » : ............................", a: "tout petit / infime" },
+                { q: "Contraire de « construire » : ............................", a: "détruire / démolir" },
+                { q: "Synonyme de « joyeux » : ............................", a: "heureux / gai / content" },
+                { q: "Contraire de « augmenter » : ............................", a: "diminuer / baisser" },
+                { q: "Synonyme de « rapide » : ............................", a: "véloce / vif / prompt" },
+                { q: "Contraire de « généreux » : ............................", a: "avare / égoïste" },
+                { q: "Donne deux mots de la même famille que « terre » : ............................", a: "terrestre, enterrer, terrain, terrien" },
+                { q: "Donne deux mots de la même famille que « dent » : ............................", a: "dentiste, dentifrice, dentaire, édenté" },
+                { q: "Trouve l'intrus : pommier — poirier — cerisier — salade — prunier", a: "salade (les autres sont des arbres fruitiers)" }
+            ],
+            vocabulaireCollege: [
+                { q: "Chronologie (du grec « chronos ») : ............................................................", a: "Suite des dates et événements dans le temps." },
+                { q: "Éphémère : ................................................................................................", a: "Qui ne dure que très peu de temps, passager." },
+                { q: "Omniscient (du latin « omnis » et « sciens ») : ............................................", a: "Qui sait tout." },
+                { q: "Philanthrope (du grec « philos » et « anthropos ») : ....................................", a: "Qui aime l'humanité et cherche à aider les autres." },
+                { q: "Polyglotte (du grec « polys » et « glotta ») : ................................................", a: "Qui parle plusieurs langues." },
+                { q: "Anachronisme : ..........................................................................................", a: "Erreur qui consiste à placer un fait ou un objet dans une époque qui n'est pas la sienne." },
+                { q: "Bénévole (du latin « bene » et « volo ») : ....................................................", a: "Qui agit de plein gré, sans être payé." },
+                { q: "Télépathie (du grec « télé » et « pathos ») : ................................................", a: "Transmission de pensée à distance." }
+            ],
+            culture: {
+                cycle2: [
+                    { q: "Combien y a-t-il de jours dans une semaine ? Et de mois dans une année ?", rep: "7 jours et 12 mois" },
+                    { q: "Cite les quatre saisons de l'année dans l'ordre.", rep: "Printemps, Été, Automne, Hiver" },
+                    { q: "Dans quel pays habitons-nous et quelle est sa capitale ?", rep: "La France, capitale : Paris" },
+                    { q: "De quoi une plante verte a-t-elle besoin pour grandir ?", rep: "D'eau, de lumière (soleil) et de terre/sels minéraux" },
+                    { q: "Comment appelle-t-on un animal qui ne mange que de la viande ?", rep: "Un carnivore" },
+                    { q: "Quelle planète éclaire et réchauffe la Terre le jour ?", rep: "Le Soleil (c'est une étoile)" },
+                    { q: "Combien de jours compte une année normale ? Et une année bissextile ?", rep: "365 jours (366 jours pour une année bissextile)" },
+                    { q: "Comment appelle-t-on un animal qui mange à la fois des végétaux et de la viande ?", rep: "Un omnivore" },
+                    { q: "Quels sont les trois couleurs du drapeau français, de gauche à droite ?", rep: "Bleu, Blanc, Rouge" },
+                    { q: "Quel sens utilise-t-on avec nos oreilles ? Et avec notre nez ?", rep: "L'ouïe (oreilles) et l'odorat (nez)" }
+                ],
+                cycle3: [
+                    { q: "En quelle année Clovis a-t-il été baptisé à Reims ?", rep: "En 496 (ou vers 496)" },
+                    { q: "Qui était le roi des Francs couronné empereur en l'an 800 ?", rep: "Charlemagne" },
+                    { q: "Cite les 5 océans de la planète Terre.", rep: "Atlantique, Pacifique, Indien, Arctique, Austral" },
+                    { q: "Quels sont les trois états physiques de l'eau dans la nature ?", rep: "Solide (glace), liquide (eau), gazeux (vapeur d'eau)" },
+                    { q: "Quelle devise est inscrite sur les mairies de France ?", rep: "Liberté, Égalité, Fraternité" },
+                    { q: "Quelle est la date exacte de la prise de la Bastille ?", rep: "Le 14 juillet 1789" },
+                    { q: "Combien de planètes composent notre système solaire ?", rep: "8 planètes (Mercure, Vénus, Terre, Mars, Jupiter, Saturne, Uranus, Neptune)" },
+                    { q: "Qui a remporté la bataille d'Alésia face à Vercingétorix en 52 av. J.-C. ?", rep: "Jules César" },
+                    { q: "Quel roi de France a fait construire le château de Versailles ?", rep: "Louis XIV (le Roi-Soleil)" },
+                    { q: "Combien de temps met la Terre pour faire un tour complet autour du Soleil ?", rep: "1 an (environ 365 jours et 6 heures)" },
+                    { q: "Comment appelle-t-on le passage de l'eau liquide à la vapeur d'eau ?", rep: "L'évaporation (ou vaporisation)" },
+                    { q: "Cite deux grands fleuves qui traversent la France.", rep: "La Seine, la Loire, le Rhône, la Garonne (ou le Rhin)" }
+                ],
+                cycle4: [
+                    { q: "Quelles sont les dates exactes de la Première Guerre mondiale ?", rep: "Du 28 juillet 1914 au 11 novembre 1918" },
+                    { q: "En quelle année la Ve République a-t-elle été fondée par le général de Gaulle ?", rep: "En 1958" },
+                    { q: "Quel traité met fin à la Première Guerre mondiale en 1919 ?", rep: "Le traité de Versailles" },
+                    { q: "Comment appelle-t-on l'ensemble des pays utilisant l'euro comme monnaie ?", rep: "La zone euro" },
+                    { q: "En SVT, quel organe produit l'insuline pour réguler la glycémie ?", rep: "Le pancréas" },
+                    { q: "En Physique-Chimie, quelle est l'unité légale de la tension électrique ?", rep: "Le Volt (V)" },
+                    { q: "Quelles sont les trois grandes métropoles françaises les plus peuplées ?", rep: "Paris, Marseille, Lyon" },
+                    { q: "Quelle est la date de la libération du camp d'Auschwitz-Birkenau ?", rep: "Le 27 janvier 1945" },
+                    { q: "En quelle année les femmes ont-elles obtenu le droit de vote en France ?", rep: "En 1944 (ordonnance du 21 avril 1944)" },
+                    { q: "En Physique-Chimie, quelle est la formule chimique de l'eau et du dioxyde de carbone ?", rep: "H₂O (eau) et CO₂ (dioxyde de carbone)" },
+                    { q: "Quel président français a aboli la peine de mort en 1981 ?", rep: "François Mitterrand (porté par Robert Badinter)" },
+                    { q: "En Géographie, quelle est la première puissance économique de l'Union européenne ?", rep: "L'Allemagne" }
+                ]
+            },
+            enigmes: [
+                {
+                    q: "Trois amis (Léo, Maya et Sam) ont chacun un animal différent : un chat, un chien et un poisson.\n• Léo est allergique aux poils d'animaux.\n• Maya n'a pas de chien.\nQuel animal possède chacun des trois amis ?\nRéponse : Léo : .................. | Maya : .................. | Sam : ..................",
+                    a: "Léo : poisson | Maya : chat | Sam : chien"
+                },
+                {
+                    q: "Quatre coureurs (Inès, Noah, Emma et Lucas) terminent une course.\n• Inès arrive juste devant Noah.\n• Lucas est dernier.\n• Emma n'est pas première.\nQuel est le classement du 1er au 4ème ?\nRéponse : 1er : .............. | 2ème : .............. | 3ème : .............. | 4ème : ..............",
+                    a: "1er : Inès | 2ème : Noah | 3ème : Emma | 4ème : Lucas"
+                },
+                {
+                    q: "Dans un panier, il y a des pommes et des poires. En tout, il y a 12 fruits.\nIl y a 2 fois plus de pommes que de poires.\nCombien y a-t-il de pommes et de poires ?\nRéponse : .................. pommes et .................. poires.",
+                    a: "8 pommes et 4 poires (8 + 4 = 12 et 8 = 2 × 4)"
+                },
+                {
+                    q: "Je suis un nombre à deux chiffres.\n• Mon chiffre des dizaines est le double de mon chiffre des unités.\n• La somme de mes deux chiffres est égale à 9.\nQui suis-je ?\nRéponse : Je suis le nombre ..................",
+                    a: "63 (6 est le double de 3, et 6 + 3 = 9)"
+                },
+                {
+                    q: "Un escargot grimpe en haut d'un mur de 10 mètres.\nChaque jour, il monte de 3 mètres, mais chaque nuit il redescend de 2 mètres.\nAu bout de combien de jours atteindra-t-il le sommet du mur ?\nRéponse : Au bout de .................. jours.",
+                    a: "8 jours (au soir du 7e jour il est à 7 m ; le 8e jour il monte de 3 m et atteint 10 m)"
+                }
+            ]
+        };
+
+        // --- 4. GÉNÉRATEURS D'EXERCICES MATHÉMATIQUES PARAMÉTRIQUES (ANTI-DOUBLON) ---
+        function generateMathBlocks(grade, count) {
+            const blocks = [];
+            const mult = diffMultiplier();
+
+            const addBlock = (title, instruction, items, layout = 'grid-2') => {
+                blocks.push({ subject: 'Mathématiques', title, instruction, items, layout });
+            };
+
+            if (grade === 'cp') {
+                // Bloc 1 : Calcul rapide unique
+                let items1 = [];
+                for (let i = 0; i < 6; i++) {
+                    items1.push(SessionMemory.uniqueMath('cp_calc', () => {
+                        if (i % 2 === 0) {
+                            const a = randInt(2, Math.max(8, Math.round(14 * mult)));
+                            const b = randInt(1, 9);
+                            return { q: `${a} + ${b} = ............`, a: `${a + b}` };
+                        } else {
+                            const a = randInt(6, Math.max(10, Math.round(16 * mult)));
+                            const b = randInt(1, a - 1);
+                            return { q: `${a} − ${b} = ............`, a: `${a - b}` };
+                        }
+                    }));
+                }
+                addBlock("Calcul rapide", "Calcule le résultat de chaque addition ou soustraction.", items1, 'grid-3');
+
+                // Bloc 2 : Compléments à 10 ou 20 variés
+                const target = state.difficulty === 'defi' ? 20 : 10;
+                let items2 = [];
+                for (let i = 0; i < 6; i++) {
+                    items2.push(SessionMemory.uniqueMath('cp_comp', () => {
+                        const n = randInt(1, target - 1);
+                        return i % 2 === 0
+                            ? { q: `${n} + ...... = ${target}`, a: `${target - n}` }
+                            : { q: `...... + ${n} = ${target}`, a: `${target - n}` };
+                    }));
+                }
+                addBlock(`Les compléments à ${target}`, `Complète les additions pour obtenir ${target}.`, items2, 'grid-3');
+
+                // Bloc 3 : Comparaison
+                let items3 = [];
+                for (let i = 0; i < 6; i++) {
+                    items3.push(SessionMemory.uniqueMath('cp_cmp', () => {
+                        const a = randInt(4, Math.round(59 * mult));
+                        let b = randInt(4, Math.round(59 * mult));
+                        if (a === b) b += randInt(1, 4);
+                        return { q: `${a}   [ ___ ]   ${b}`, a: `${a} ${a < b ? '<' : '>'} ${b}` };
+                    }));
+                }
+                addBlock("Comparer les nombres", "Écris le signe qui convient (< ou >) entre les deux nombres.", items3, 'grid-3');
+
+                // Bloc 4 : Problème combinatoire varié (prénom + objet + action)
+                const probCP = SessionMemory.uniqueMath('cp_prob', () => {
+                    const prenom = pick(PRENOMS).trim();
+                    const scenarios = [
+                        { obj: "billes", lieu: "dans sa trousse", action: "en gagne", fin: "en tout" },
+                        { obj: "images", lieu: "dans son album", action: "en reçoit", fin: "maintenant" },
+                        { obj: "crayons de couleur", lieu: "sur son bureau", action: "en ajoute", fin: "en tout" },
+                        { obj: "autocollants", lieu: "dans son cahier", action: "en colle", fin: "en tout" },
+                        { obj: "bonbons", lieu: "dans son sachet", action: "en achète", fin: "maintenant" }
+                    ];
+                    const sc = pick(scenarios);
+                    const n1 = randInt(4, 12);
+                    const n2 = randInt(3, 9);
+                    return {
+                        q: `${prenom} a ${n1} ${sc.obj} ${sc.lieu}. À la récréation, il/elle ${sc.action} ${n2} de plus. Combien ${prenom} a-t-il/elle de ${sc.obj} ${sc.fin} ?\nCalcul : ................................................\nRéponse : ${prenom} a .............. ${sc.obj} ${sc.fin}.`,
+                        a: `${n1} + ${n2} = ${n1 + n2} ${sc.obj}.`
+                    };
+                });
+                addBlock("Petit problème", "Lis l'énoncé et écris ton calcul puis ta phrase réponse.", [probCP], 'list');
+
+                // Bloc 5 : File numérique
+                const fileItem = SessionMemory.uniqueMath('cp_file', () => {
+                    const start = randInt(3, 35);
+                    const step = state.difficulty === 'defi' ? pick([2, 5]) : 1;
+                    return {
+                        q: `${start}  —  ${start + step}  —  ......  —  ${start + step * 3}  —  ......  —  ......  —  ${start + step * 6}`,
+                        a: `${start + step * 2}, ${start + step * 4}, ${start + step * 5}`
+                    };
+                });
+                addBlock("La file numérique", "Complète la suite logique des nombres.", [fileItem], 'list');
+            }
+
+            else if (grade === 'ce1' || grade === 'ce2') {
+                const maxVal = grade === 'ce1' ? 100 : 1000;
+                let items1 = [];
+                for (let i = 0; i < 6; i++) {
+                    items1.push(SessionMemory.uniqueMath('ce_calc', () => {
+                        if (i < 2) {
+                            const a = randInt(14, Math.round((maxVal / 2) * mult));
+                            const b = randInt(7, 49);
+                            return { q: `${a} + ${b} = ............`, a: `${a + b}` };
+                        } else if (i < 4) {
+                            const a = randInt(35, Math.round((maxVal / 3) * mult));
+                            const b = randInt(6, 29);
+                            return { q: `${a} − ${b} = ............`, a: `${a - b}` };
+                        } else {
+                            const t = grade === 'ce1' ? pick([2, 3, 4, 5, 10]) : randInt(2, 9);
+                            const f = randInt(2, 10);
+                            return { q: `${t} × ${f} = ............`, a: `${t * f}` };
+                        }
+                    }));
+                }
+                addBlock("Calcul mental & Tables", "Effectue ces calculs de tête le plus rapidement possible.", items1, 'grid-3');
+
+                let items2 = [];
+                for (let i = 0; i < 4; i++) {
+                    items2.push(SessionMemory.uniqueMath('ce_num', () => {
+                        const n = grade === 'ce1' ? randInt(35, 99) : randInt(125, 989);
+                        const c = Math.floor(n / 100);
+                        const d = Math.floor((n % 100) / 10);
+                        const u = n % 10;
+                        const rep = c > 0 ? `${c}c ${d}d ${u}u (${c*100} + ${d*10} + ${u})` : `${d}d ${u}u (${d*10} + ${u})`;
+                        return { q: `${n} = ............................................`, a: rep };
+                    }));
+                }
+                addBlock("Numération : Décomposer un nombre", "Décompose chaque nombre en centaines, dizaines et unités.", items2, 'grid-2');
+
+                let items3 = [];
+                for (let i = 0; i < 6; i++) {
+                    items3.push(SessionMemory.uniqueMath('ce_dbl', () => {
+                        if (i % 2 === 0) {
+                            const n = randInt(6, grade === 'ce1' ? 25 : 49);
+                            return { q: `Double de ${n} : ..........`, a: `${n * 2}` };
+                        } else {
+                            const half = randInt(4, grade === 'ce1' ? 20 : 48);
+                            return { q: `Moitié de ${half * 2} : ..........`, a: `${half}` };
+                        }
+                    }));
+                }
+                addBlock("Doubles et moitiés", "Complète avec le double ou la moitié demandée.", items3, 'grid-3');
+
+                // Problème combinatoire CE1/CE2
+                const probCE = SessionMemory.uniqueMath('ce_prob', () => {
+                    const prenom = pick(PRENOMS).trim();
+                    const articles = [
+                        { nom: "albums illustrés", prix: randInt(6, 12), qte: randInt(3, 5) },
+                        { nom: "boîtes de feutres", prix: randInt(4, 9), qte: randInt(4, 6) },
+                        { nom: "cahiers de dessin", prix: randInt(3, 7), qte: randInt(4, 7) },
+                        { nom: "jeux de cartes", prix: randInt(5, 11), qte: randInt(3, 5) }
+                    ];
+                    const art = pick(articles);
+                    const billet = 50;
+                    const total = art.prix * art.qte;
+                    return {
+                        q: `À la librairie, ${prenom} achète ${art.qte} ${art.nom} à ${art.prix} € l'unité. Il/Elle paie avec un billet de ${billet} €.\n1) Combien coûtent les ${art.qte} ${art.nom} ? ......................................................\n2) Combien la caissière lui rend-elle ? ......................................................`,
+                        a: `1) ${art.qte} × ${art.prix} = ${total} €.  2) ${billet} − ${total} = ${billet - total} € rendus.`
+                    };
+                });
+                addBlock("Résolution de problème", "Rédige ton opération et ta phrase de conclusion.", [probCE], 'list');
+
+                const mesures = [
+                    () => { const m = randInt(2, 9); return { q: `${m} m = ............ cm`, a: `${m * 100} cm` }; },
+                    () => { const h = randInt(2, 5); return { q: `${h} h = ............ min`, a: `${h * 60} min` }; },
+                    () => { const km = randInt(2, 8); return { q: `${km} km = ............ m`, a: `${km * 1000} m` }; },
+                    () => { const e = randInt(2, 9); const c = pick([20, 50, 75]); return { q: `${e} € ${c} c = ............ centimes`, a: `${e * 100 + c} centimes` }; },
+                    () => { const kg = randInt(2, 7); return { q: `${kg} kg = ............ g`, a: `${kg * 1000} g` }; },
+                    () => { const cm = randInt(3, 9) * 10; return { q: `${cm} mm = ............ cm`, a: `${cm / 10} cm` }; }
+                ];
+                const pickedMesures = SessionMemory.draw('ce_mesures', mesures, 4).map(fn => fn());
+                addBlock("Grandeurs et mesures", "Convertis dans l'unité demandée.", pickedMesures, 'grid-2');
+            }
+
+            else if (grade === 'cm1' || grade === 'cm2') {
+                let items1 = [];
+                for (let i = 0; i < 6; i++) {
+                    items1.push(SessionMemory.uniqueMath('cm_calc', () => {
+                        if (i < 2) {
+                            const a = (randInt(15, 95) / 10).toFixed(1);
+                            const b = (randInt(12, 75) / 10).toFixed(1);
+                            return { q: `${a.replace('.', ',')} + ${b.replace('.', ',')} = ..........`, a: (parseFloat(a) + parseFloat(b)).toFixed(1).replace('.', ',') };
+                        } else if (i < 4) {
+                            const a = (randInt(12, 98) / 10).toFixed(1);
+                            const p = pick([10, 100, 1000]);
+                            return { q: `${a.replace('.', ',')} × ${p} = ..........`, a: Math.round(parseFloat(a) * p).toString() };
+                        } else {
+                            const a = randInt(12, 29);
+                            const b = randInt(4, 9);
+                            return { q: `${a} × ${b} = ..........`, a: `${a * b}` };
+                        }
+                    }));
+                }
+                addBlock("Calcul mental & Décimaux", "Calcule mentalement sans poser l'opération.", items1, 'grid-3');
+
+                let items2 = [];
+                const denoms = [2, 3, 4, 5, 10];
+                for (let i = 0; i < 4; i++) {
+                    items2.push(SessionMemory.uniqueMath('cm_frac', () => {
+                        const d = pick(denoms);
+                        const num = randInt(1, d - 1);
+                        const multBase = randInt(3, 15);
+                        const total = d * multBase;
+                        return {
+                            q: `Calcule ${num}/${d} de ${total} = ..........`,
+                            a: `${(total / d) * num} (car ${total} ÷ ${d} = ${multBase}, puis × ${num})`
+                        };
+                    }));
+                }
+                addBlock("Les fractions d'une quantité", "Trouve la valeur correspondant à chaque fraction.", items2, 'grid-2');
+
+                let items3 = [];
+                for (let i = 0; i < 4; i++) {
+                    items3.push(SessionMemory.uniqueMath('cm_div', () => {
+                        const diviseur = randInt(4, 9);
+                        const quotient = randInt(11, 28);
+                        const reste = randInt(1, diviseur - 1);
+                        const dividende = diviseur * quotient + reste;
+                        return {
+                            q: `${dividende} = (${diviseur} × ......) + ......`,
+                            a: `(${diviseur} × ${quotient}) + ${reste}`
+                        };
+                    }));
+                }
+                addBlock("Division euclidienne", "Complète les égalités en trouvant le quotient et le reste.", items3, 'grid-2');
+
+                // Problèmes variés de proportionnalité CM1/CM2
+                const probCM = SessionMemory.uniqueMath('cm_prob', () => {
+                    const type = randInt(1, 3);
+                    if (type === 1) {
+                        const vitesse = pick([60, 70, 80, 90, 110]);
+                        const heures = randInt(2, 4);
+                        const demie = state.difficulty !== 'decouverte';
+                        const totalTemps = demie ? `${heures} h 30` : `${heures} h`;
+                        const dist = demie ? (vitesse * heures + vitesse / 2) : (vitesse * heures);
+                        return {
+                            q: `Un train roule à vitesse constante de ${vitesse} km par heure.\nQuelle distance parcourt-il en ${totalTemps} ?\nCalculs & réponse : ....................................................................................`,
+                            a: `${dist} km (${vitesse} × ${heures}${demie ? ` + ${vitesse/2}` : ''} = ${dist} km).`
+                        };
+                    } else if (type === 2) {
+                        const prenom = pick(PRENOMS).trim();
+                        const nbBase = pick([3, 4, 5]);
+                        const prixUnitaire = randInt(2, 4);
+                        const prixBase = nbBase * prixUnitaire;
+                        const nbCible = nbBase * randInt(2, 4);
+                        return {
+                            q: `Chez le pâtissier, ${prenom} paie ${prixBase} € pour ${nbBase} tartelettes aux fraises.\nCombien coûtent ${nbCible} tartelettes identiques ?\nCalculs & réponse : ....................................................................................`,
+                            a: `${nbCible * prixUnitaire} € (1 tartelette = ${prixUnitaire} €, donc ${nbCible} × ${prixUnitaire} = ${nbCible * prixUnitaire} €).`
+                        };
+                    } else {
+                        const pagesParJour = randInt(12, 22);
+                        const jours = randInt(5, 9);
+                        return {
+                            q: `Un roman passionnant compte ${pagesParJour * jours + 15} pages. Emma lit ${pagesParJour} pages chaque soir pendant ${jours} jours.\nCombien de pages lui reste-t-il encore à lire ?\nCalculs & réponse : ....................................................................................`,
+                            a: `Pages lues : ${pagesParJour} × ${jours} = ${pagesParJour * jours}. Il reste 15 pages à lire.`
+                        };
+                    }
+                });
+                addBlock("Problème de proportionnalité & logique", "Explique ta démarche et écris la réponse.", [probCM], 'list');
+
+                // L et l sont gardés en variables : plus de re-parse par regex du corrigé.
+                const geomL = randInt(7, 18);
+                const geoml = randInt(3, 8);
+                const geomCM = [
+                    { q: `Calcule son périmètre P = ....................................`, a: `P = 2 × (${geomL} + ${geoml}) = ${2 * (geomL + geoml)} cm` },
+                    { q: `Calcule son aire A = ...........................................`, a: `A = ${geomL} × ${geoml} = ${geomL * geoml} cm²` }
+                ];
+                addBlock("Géométrie : Périmètre et Aire", `Soit un rectangle de longueur L = ${geomL} cm et de largeur l = ${geoml} cm.`, geomCM, 'grid-2');
+            }
+
+            else {
+                // COLLÈGE : 6ème, 5ème, 4ème, 3ème
+                let items1 = [];
+                for (let i = 0; i < 6; i++) {
+                    items1.push(SessionMemory.uniqueMath('col_calc', () => {
+                        if (grade === '6eme') {
+                            const a = randInt(3, 14);
+                            const b = randInt(2, 9);
+                            const c = randInt(2, 8);
+                            return i % 2 === 0
+                                ? { q: `${a} + ${b} × ${c} = ..........`, a: `${a + b * c}` }
+                                : { q: `(${a} + ${b}) × ${c} = ..........`, a: `${(a + b) * c}` };
+                        } else {
+                            const a = randInt(-15, -2);
+                            const b = randInt(3, 18);
+                            if (i % 3 === 0) {
+                                return { q: `(${a}) + (+${b}) = ..........`, a: `${a + b}` };
+                            } else if (i % 3 === 1) {
+                                const c = randInt(-9, -2);
+                                return { q: `(${a}) × (${c}) = ..........`, a: `${a * c}` };
+                            } else {
+                                const c = randInt(2, 12);
+                                return { q: `(${a}) − (+${c}) = ..........`, a: `${a - c}` };
+                            }
+                        }
+                    }));
+                }
+                addBlock(
+                    grade === '6eme' ? "Priorités opératoires" : "Calcul avec les nombres relatifs",
+                    "Calcule en respectant les règles de priorité et de signes.",
+                    items1,
+                    'grid-3'
+                );
+
+                if (grade === '6eme' || grade === '5eme') {
+                    let items2 = [];
+                    for (let i = 0; i < 4; i++) {
+                        items2.push(SessionMemory.uniqueMath('col_frac', () => {
+                            const d1 = pick([3, 4, 5, 6, 7]);
+                            const k = randInt(2, 4);
+                            const d2 = d1 * k;
+                            const n1 = randInt(1, d1 - 1);
+                            const n2 = randInt(1, d2 - 1);
+                            const numRes = n1 * k + n2;
+                            return {
+                                q: `${n1}/${d1} + ${n2}/${d2} = ............`,
+                                a: `${n1 * k}/${d2} + ${n2}/${d2} = ${numRes}/${d2}`
+                            };
+                        }));
+                    }
+                    addBlock("Opérations sur les fractions", "Mets au même dénominateur puis calcule.", items2, 'grid-2');
+                } else {
+                    let items2 = [];
+                    for (let i = 0; i < 4; i++) {
+                        items2.push(SessionMemory.uniqueMath('col_alg', () => {
+                            if (i === 0) {
+                                const x = randInt(2, 11);
+                                const a = randInt(2, 7);
+                                const b = randInt(1, 15);
+                                const rhs = a * x + b;
+                                return { q: `Résoudre : ${a}x + ${b} = ${rhs}`, a: `${a}x = ${rhs - b} ⇒ x = ${x}` };
+                            } else if (i === 1) {
+                                const x = randInt(2, 9);
+                                const a = randInt(4, 9);
+                                const c = randInt(2, a - 1);
+                                const b = randInt(1, 10);
+                                const d = (a - c) * x + b;
+                                return { q: `Résoudre : ${a}x + ${b} = ${c}x + ${d}`, a: `${a - c}x = ${d - b} ⇒ x = ${x}` };
+                            } else if (i === 2) {
+                                const k = randInt(2, 8);
+                                const a = randInt(2, 6);
+                                const b = randInt(1, 9);
+                                return { q: `Développer : ${k}(${a}x − ${b})`, a: `${k * a}x − ${k * b}` };
+                            } else {
+                                const k = randInt(3, 9);
+                                const a = randInt(2, 5);
+                                const b = randInt(1, 7);
+                                return { q: `Factoriser : ${k * a}x + ${k * b}`, a: `${k}(${a}x + ${b})` };
+                            }
+                        }));
+                    }
+                    addBlock("Calcul littéral & Équations", "Développe, factorise ou résous les équations.", items2, 'grid-2');
+                }
+
+                // Problème pourcentages / échelle / vitesse varié
+                const probCol = SessionMemory.uniqueMath('col_prob', () => {
+                    const articles = ["un manteau", "une paire de baskets", "un sac à dos", "un casque audio", "une montre connectée", "un vélo"];
+                    const art = pick(articles);
+                    const prixInit = pick([40, 50, 60, 80, 90, 120, 140, 160, 200]);
+                    const reduc = pick([10, 15, 20, 25, 30, 40]);
+                    const montantReduc = (prixInit * reduc) / 100;
+                    return {
+                        q: `Pendant les soldes, ${art} affiché à ${prixInit} € bénéficie d'une remise de ${reduc} %.\n1) Calcule le montant de la réduction : ......................................................\n2) Quel est le nouveau prix après remise ? ......................................................`,
+                        a: `1) ${prixInit} × ${reduc}/100 = ${montantReduc} €.  2) ${prixInit} − ${montantReduc} = ${prixInit - montantReduc} €.`
+                    };
+                });
+                addBlock("Pourcentages & Vie pratique", "Détaille le calcul sur ta copie.", [probCol], 'list');
+
+                if (grade === '4eme' || grade === '3eme') {
+                    const pythItem = SessionMemory.uniqueMath('col_pyth', () => {
+                        const triplets = [[3, 4, 5], [6, 8, 10], [5, 12, 13], [8, 15, 17], [9, 12, 15], [7, 24, 25], [12, 16, 20]];
+                        const [ab, ac, bc] = pick(triplets);
+                        const sommets = pick([["A", "B", "C"], ["E", "F", "G"], ["M", "N", "P"], ["R", "S", "T"]]);
+                        return {
+                            q: `Soit ${sommets[0]}${sommets[1]}${sommets[2]} un triangle rectangle en ${sommets[0]} tel que ${sommets[0]}${sommets[1]} = ${ab} cm et ${sommets[0]}${sommets[2]} = ${ac} cm.\nCalcule la longueur de l'hypoténuse [${sommets[1]}${sommets[2]}].\nRédaction : ............................................................................................................`,
+                            a: `D'après le théorème de Pythagore : ${sommets[1]}${sommets[2]}² = ${ab}² + ${ac}² = ${ab*ab} + ${ac*ac} = ${bc*bc}. Donc ${sommets[1]}${sommets[2]} = √${bc*bc} = ${bc} cm.`
+                        };
+                    });
+                    addBlock("Théorème de Pythagore", "Rédige rigoureusement la démonstration.", [pythItem], 'list');
+                } else {
+                    const angleItem = SessionMemory.uniqueMath('col_angle', () => {
+                        const a1 = randInt(32, 78);
+                        const a2 = randInt(28, 68);
+                        return {
+                            q: `Dans un triangle EFG, on sait que Ê = ${a1}° et F̂ = ${a2}°. Calcule la mesure de l'angle Ĝ.\nCalcul : ............................................................................................................`,
+                            a: `Ĝ = 180° − (${a1}° + ${a2}°) = 180° − ${a1 + a2}° = ${180 - (a1 + a2)}°`
+                        };
+                    });
+                    addBlock("Propriété des angles d'un triangle", "Rappel : la somme des angles d'un triangle vaut 180°.", [angleItem], 'list');
+                }
+
+                if (grade === '4eme' || grade === '3eme') {
+                    const powItems = SessionMemory.uniqueMath('col_pow', () => {
+                        const p1 = randInt(2, 7);
+                        const p2 = randInt(2, 6);
+                        const expPow = randInt(2, 4); // stocké : l'énoncé et le corrigé utilisent LE MÊME exposant
+                        const coeff = (randInt(12, 95) / 10).toString().replace('.', ',');
+                        const expSci = randInt(4, 8);
+                        const numFull = Math.round(parseFloat(coeff.replace(',', '.')) * Math.pow(10, expSci)).toLocaleString('fr-FR');
+                        return [
+                            { q: `10^${p1} × 10^${p2} = ............`, a: `10^${p1 + p2}` },
+                            { q: `10^${p1 + 4} / 10^${p2} = ............`, a: `10^${p1 + 4 - p2}` },
+                            { q: `(10^${p1})^${expPow} = ............`, a: `10^${p1 * expPow}` },
+                            { q: `Écriture scientifique de ${numFull} = ....................`, a: `${coeff} × 10^${expSci}` }
+                        ];
+                    });
+                    addBlock("Puissances de 10", "Écris sous la forme d'une seule puissance de 10 ou en écriture scientifique.", powItems, 'grid-2');
+                } else {
+                    const dureeItems = SessionMemory.uniqueMath('col_duree', () => {
+                        const h = randInt(1, 4);
+                        const min = pick([15, 20, 30, 40, 45]);
+                        const hDec = randInt(1, 3);
+                        const minDec = pick([15, 30, 45]);
+                        return [
+                            { q: `${h} h ${min} min = ............ min`, a: `${h * 60 + min} min` },
+                            { q: `${hDec} h ${minDec} min = ............ h (nombre décimal)`, a: `${(hDec + minDec / 60).toString().replace('.', ',')} h` }
+                        ];
+                    });
+                    addBlock("Conversions de durées", "Convertis les durées demandées.", dureeItems, 'grid-2');
+                }
+            }
+
+            return blocks.slice(0, count);
+        }
+
+        // --- 5. GÉNÉRATEURS D'EXERCICES DE FRANÇAIS AVEC PIOCHE SANS REMISE ---
+        function generateFrenchBlocks(grade, count) {
+            const blocks = [];
+            const addBlock = (title, instruction, items, layout = 'list') => {
+                blocks.push({ subject: 'Français', title, instruction, items, layout });
+            };
+
+            const isCP = grade === 'cp';
+            const isCE1 = grade === 'ce1';
+            const isPrimSup = ['ce2', 'cm1', 'cm2'].includes(grade);
+
+            if (isCP) {
+                const sons = SessionMemory.draw('cp_sons', DB.sonsCP, 6);
+                addBlock("Étude des sons et syllabes", "Complète chaque mot avec la bonne graphie.", sons.map(s => ({ q: s.mot, a: s.rep })), 'grid-2');
+
+                const conjPool = CONJ_ENGINE.buildPool('cp');
+                const conj = SessionMemory.draw('cp_conj', conjPool, 4);
+                addBlock("Initiation au verbe", "Complète avec le verbe conjugué au présent.", conj, 'grid-2');
+
+                const listesAlpha = [
+                    { mots: "pomme — banane — cerise — abricot", rep: "1. abricot  2. banane  3. cerise  4. pomme" },
+                    { mots: "tigre — éléphant — zèbre — girafe", rep: "1. éléphant  2. girafe  3. tigre  4. zèbre" },
+                    { mots: "rouge — bleu — vert — jaune", rep: "1. bleu  2. jaune  3. rouge  4. vert" },
+                    { mots: "lundi — vendredi — dimanche — mercredi", rep: "1. dimanche  2. lundi  3. mercredi  4. vendredi" },
+                    { mots: "cahier — stylo — ardoise — gomme", rep: "1. ardoise  2. cahier  3. gomme  4. stylo" }
+                ];
+                const alpha = SessionMemory.draw('cp_alpha', listesAlpha, 1)[0];
+                addBlock("Ordre alphabétique", `Range ces mots dans l'ordre de l'alphabet : ${alpha.mots}`, [
+                    { q: "1. ......................   2. ......................   3. ......................   4. ......................", a: alpha.rep }
+                ], 'list');
+
+                const phrasesCopie = [
+                    { q: "« Le petit lapin blanc mange une carotte. »", a: "Animal entouré : lapin" },
+                    { q: "« Un joli renard roux traverse la forêt. »", a: "Animal entouré : renard" },
+                    { q: "« La petite tortue verte marche lentement. »", a: "Animal entouré : tortue" },
+                    { q: "« Le gros ours brun dort dans sa grotte. »", a: "Animal entouré : ours" }
+                ];
+                const copie = SessionMemory.draw('cp_copie', phrasesCopie, 1)[0];
+                addBlock("Copie et compréhension", "Recopie proprement la phrase et entoure le nom de l'animal.", [
+                    { q: `${copie.q}\n........................................................................................................................`, a: copie.a }
+                ], 'list');
+            }
+            else if (isCE1 || isPrimSup) {
+                const conjPool = CONJ_ENGINE.buildPool(grade);
+                const conjItems = SessionMemory.draw(`conj_${grade}`, conjPool, 6);
+                addBlock(
+                    "Conjugaison",
+                    "Conjugue les verbes entre parenthèses au temps indiqué.",
+                    conjItems,
+                    'grid-2'
+                );
+
+                // Mélange d'orthographe grammaticale + accords GN combinatoires
+                const orthoItems = SessionMemory.draw(`ortho_prim_${grade}`, DB.orthographe.primaire, 2).map(o => ({ q: o.q, a: o.rep }));
+                const gnItems = SessionMemory.draw(`gn_prim_${grade}`, GN_ENGINE.buildPool(), 2);
+                addBlock(
+                    "Orthographe & Accords",
+                    "Applique les règles d'accord et choisis les bons homophones.",
+                    [...orthoItems, ...gnItems],
+                    'list'
+                );
+
+                const gramItems = SessionMemory.draw(`gram_prim_${grade}`, DB.grammaire.primaire, 3);
+                addBlock(
+                    "Grammaire & Analyse",
+                    "Lis attentivement chaque consigne et réponds sur les pointillés.",
+                    gramItems.map(g => ({ q: `${g.q}\nRéponse : ....................................................................................................`, a: g.rep })),
+                    'list'
+                );
+
+                const vocabItems = SessionMemory.draw(`vocab_prim_${grade}`, DB.vocabulairePrimaire, 4);
+                addBlock("Vocabulaire : Synonymes, Contraires & Familles", "Réponds à chaque consigne de vocabulaire.", vocabItems, 'grid-2');
+            }
+            else {
+                const conjPool = CONJ_ENGINE.buildPool(grade);
+                const conjItems = SessionMemory.draw(`conj_${grade}`, conjPool, 6);
+                addBlock(
+                    "Maîtrise des temps et modes",
+                    "Conjugue avec précision les verbes au temps et au mode demandés.",
+                    conjItems,
+                    'grid-2'
+                );
+
+                const gramItems = SessionMemory.draw(`gram_col_${grade}`, DB.grammaire.college, 4);
+                addBlock(
+                    "Analyse grammaticale & Stylistique",
+                    "Identifie les figures de style, fonctions ou natures demandées.",
+                    gramItems.map(g => ({ q: `${g.q}\nRéponse : ....................................................................................................`, a: g.rep })),
+                    'list'
+                );
+
+                const orthoItems = SessionMemory.draw(`ortho_col_${grade}`, DB.orthographe.college, 4);
+                addBlock(
+                    "Orthographe grammaticale (Brevet)",
+                    "Justifie ou applique l'accord correct.",
+                    orthoItems.map(o => ({ q: o.q, a: o.rep })),
+                    'list'
+                );
+
+                const vocabCol = SessionMemory.draw(`vocab_col_${grade}`, DB.vocabulaireCollege, 3);
+                addBlock("Étymologie & Vocabulaire soutenu", "Explique le sens des mots à partir de leurs racines grecques ou latines.", vocabCol, 'list');
+            }
+
+            return blocks.slice(0, count);
+        }
+
+        // --- 6. GÉNÉRATEUR CULTURE GÉNÉRALE / HISTOIRE-GÉO / SCIENCES (SANS REMISE) ---
+        function generateCultureBlocks(grade, count) {
+            const blocks = [];
+            let pool = DB.culture.cycle2;
+            let deckKey = 'cult_c2';
+            let labelCycle = "Découverte du Monde";
+
+            if (['cm1', 'cm2', '6eme'].includes(grade)) {
+                pool = DB.culture.cycle3;
+                deckKey = 'cult_c3';
+                labelCycle = "Histoire, Géographie & Sciences";
+            } else if (['5eme', '4eme', '3eme'].includes(grade)) {
+                pool = DB.culture.cycle4;
+                deckKey = 'cult_c4';
+                labelCycle = "Repères Histoire-Géo & Sciences (Brevet)";
+            }
+
+            const selected = SessionMemory.draw(deckKey, pool, 4);
+            blocks.push({
+                subject: labelCycle,
+                title: "Quiz de connaissances générales",
+                instruction: "Réponds par une phrase claire et précise.",
+                items: selected.map(item => ({
+                    q: `${item.q}\nRéponse : ............................................................................................................`,
+                    a: item.rep
+                })),
+                layout: 'list'
+            });
+
+            const enigme = SessionMemory.draw('enigmes_all', DB.enigmes, 1)[0];
+            blocks.push({
+                subject: "Logique & Raisonnement",
+                title: "Énigme logique",
+                instruction: "Lis attentivement les indices pour déduire la solution.",
+                items: [enigme],
+                layout: 'list'
+            });
+
+            return blocks.slice(0, count);
+        }
+
+        // --- 7. ORCHESTRATEUR DE GÉNÉRATION DE FICHE ---
+        function generateWorksheet() {
+            const count = parseInt(document.getElementById('count-select').value, 10);
+            state.difficulty = document.getElementById('difficulty-select').value;
+            state.count = count;
+
+            let blocks = [];
+            if (state.subject === 'maths') {
+                blocks = generateMathBlocks(state.grade, count);
+            } else if (state.subject === 'francais') {
+                blocks = generateFrenchBlocks(state.grade, count);
+            } else if (state.subject === 'culture') {
+                const cult = generateCultureBlocks(state.grade, 2);
+                const mathsBonus = generateMathBlocks(state.grade, 1);
+                const frBonus = generateFrenchBlocks(state.grade, 1);
+                blocks = [...cult, ...mathsBonus, ...frBonus].slice(0, count);
+            } else {
+                const m = generateMathBlocks(state.grade, Math.ceil(count / 2));
+                const f = generateFrenchBlocks(state.grade, Math.floor(count / 2));
+                const c = generateCultureBlocks(state.grade, 1);
+                blocks = [...m, ...f, ...c].slice(0, count);
+            }
+
+            // Comptabilise le nombre de questions uniques générées sur cette fiche
+            const totalItemsOnSheet = blocks.reduce((acc, b) => acc + b.items.length, 0);
+            updateVarietyCounter(totalItemsOnSheet);
+
+            renderWorksheet(blocks);
+        }
+
+        // --- 8. RENDU HTML SUR LA FEUILLE A4 ET LE CORRIGÉ ---
+        function renderWorksheet(blocks) {
+            const exContainer = document.getElementById('exercises-container');
+            const ansContainer = document.getElementById('answers-container');
+            if (!exContainer || !ansContainer) return;
+            exContainer.innerHTML = '';
+            ansContainer.innerHTML = '';
+
+            const gradeObj = GRADES.find(g => g.id === state.grade);
+            if (!gradeObj) return;
+            document.getElementById('sheet-grade-pill').textContent = gradeObj.label;
+            document.getElementById('sheet-subject-pill').textContent = SUBJECT_LABELS[state.subject];
+            document.getElementById('sheet-diff-pill').textContent = `• ${DIFFICULTY_LABELS[state.difficulty]}`;
+
+            document.getElementById('answer-grade-title').textContent = `${gradeObj.label} (${DIFFICULTY_LABELS[state.difficulty]})`;
+            document.getElementById('answer-subject-title').textContent = SUBJECT_LABELS[state.subject];
+
+            const refCode = `Réf. #${gradeObj.label.toUpperCase()}-${randInt(1000, 9999)}`;
+            document.getElementById('sheet-ref-code').textContent = refCode;
+            document.getElementById('answer-ref-code').textContent = refCode;
+
+            blocks.forEach((block, index) => {
+                const num = index + 1;
+
+                const exCard = document.createElement('article');
+                exCard.className = 'border border-slate-300 rounded-xl p-3.5 bg-white';
+
+                let gridClass = 'space-y-2.5';
+                if (block.layout === 'grid-2') gridClass = 'grid grid-cols-2 gap-x-6 gap-y-2.5';
+                if (block.layout === 'grid-3') gridClass = 'grid grid-cols-3 gap-x-4 gap-y-2.5';
+
+                const itemsHTML = block.items.map((item, idx) => {
+                    const formattedQ = escapeHtml(item.q).replace(/\n/g, '<br>');
+                    return `<div class="text-[13.5px] leading-relaxed text-slate-800"><span class="font-bold text-blue-700 mr-1">${String.fromCharCode(97 + idx)})</span> ${formattedQ}</div>`;
+                }).join('');
+
+                exCard.innerHTML = `
+                    <div class="flex items-center justify-between gap-2 mb-1">
+                        <h3 class="font-display font-bold text-base text-slate-900 flex items-center gap-2">
+                            <span class="w-6 h-6 rounded-lg bg-slate-800 text-white text-xs inline-flex items-center justify-center font-sans">${num}</span>
+                            ${escapeHtml(block.title)}
+                        </h3>
+                        <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-slate-100 text-slate-500">${block.subject}</span>
+                    </div>
+                    <p class="text-xs italic text-slate-600 mb-2.5 pl-8">${escapeHtml(block.instruction)}</p>
+                    <div class="${gridClass} pl-2">
+                        ${itemsHTML}
+                    </div>
+                `;
+                exContainer.appendChild(exCard);
+
+                const ansCard = document.createElement('div');
+                ansCard.className = 'border border-emerald-200 rounded-xl p-3 bg-emerald-50/30';
+                const ansItemsHTML = block.items.map((item, idx) => {
+                    return `<div class="text-xs text-slate-800"><strong class="text-emerald-800">${String.fromCharCode(97 + idx)})</strong> ${escapeHtml(item.a)}</div>`;
+                }).join('');
+
+                ansCard.innerHTML = `
+                    <div class="font-display font-bold text-sm text-emerald-900 mb-1.5">Exercice ${num} : ${escapeHtml(block.title)}</div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5 pl-2">
+                        ${ansItemsHTML}
+                    </div>
+                `;
+                ansContainer.appendChild(ansCard);
+            });
+        }
+
+        // --- 9. GESTION DE L'INTERFACE & INTERACTIONS ---
+        function initUI() {
+            initPWAManifest();
+
+            // Changer la difficulté ou le volume régénère enfin la fiche (avant : aucun effet).
+            const diffSel = document.getElementById('difficulty-select');
+            if (diffSel) diffSel.addEventListener('change', () => generateWorksheet());
+            const countSel = document.getElementById('count-select');
+            if (countSel) countSel.addEventListener('change', () => generateWorksheet());
+
+            const gradeGrid = document.getElementById('grade-grid');
+            if (!gradeGrid) return;
+            GRADES.forEach(g => {
+                const btn = document.createElement('button');
+                btn.type = 'button';
+                btn.dataset.grade = g.id;
+                btn.className = 'grade-btn py-2 px-3 rounded-xl border-2 font-display font-bold text-sm transition text-center';
+                btn.textContent = g.label;
+                btn.onclick = () => selectGrade(g.id);
+                gradeGrid.appendChild(btn);
+            });
+
+            document.querySelectorAll('.subject-btn').forEach(btn => {
+                btn.onclick = () => selectSubject(btn.dataset.subject);
+            });
+
+            const today = new Date().toLocaleDateString('fr-FR', { weekday: 'long', day: 'numeric', month: 'long' });
+            const capitalizedDate = today.charAt(0).toUpperCase() + today.slice(1);
+            document.getElementById('sheet-date').value = capitalizedDate;
+
+            selectGrade('ce2', false);
+            selectSubject('maths', false);
+            updateHeaderFields();
+            generateWorksheet();
+            autoFitMobileZoom();
+        }
+
+        function selectGrade(gradeId, regenerate = true) {
+            state.grade = gradeId;
+            const gradeObj = GRADES.find(g => g.id === gradeId);
+            if (!gradeObj) return;
+            const badge = document.getElementById('cycle-badge');
+            if (badge) badge.textContent = gradeObj.cycle;
+
+            document.querySelectorAll('.grade-btn').forEach(btn => {
+                if (btn.dataset.grade === gradeId) {
+                    btn.className = 'grade-btn py-2 px-3 rounded-xl border-2 border-blue-600 bg-blue-600 text-white font-display font-bold text-sm shadow-sm transition text-center';
+                } else {
+                    btn.className = 'grade-btn py-2 px-3 rounded-xl border-2 border-slate-200 bg-white hover:border-blue-300 text-slate-700 font-display font-bold text-sm transition text-center';
+                }
+            });
+
+            if (regenerate) generateWorksheet();
+        }
+
+        function selectSubject(subjectId, regenerate = true) {
+            state.subject = subjectId;
+            document.querySelectorAll('.subject-btn').forEach(btn => {
+                if (btn.dataset.subject === subjectId) {
+                    btn.className = 'subject-btn p-2.5 rounded-xl border-2 border-amber-500 bg-amber-50 text-slate-900 text-left transition flex items-center gap-2.5 shadow-sm';
+                } else {
+                    btn.className = 'subject-btn p-2.5 rounded-xl border-2 border-slate-200 bg-white hover:border-slate-300 text-slate-600 text-left transition flex items-center gap-2.5';
+                }
+            });
+
+            if (regenerate) generateWorksheet();
+        }
+
+        function updateHeaderFields() {
+            const nameEl = document.getElementById('student-name');
+            const dateEl = document.getElementById('sheet-date');
+            const titleEl = document.getElementById('custom-title');
+            if (!nameEl || !dateEl || !titleEl) return;
+            const name = nameEl.value.trim();
+            const date = dateEl.value.trim();
+            const customTitle = titleEl.value.trim();
+
+            document.getElementById('display-student-name').textContent = name;
+            document.getElementById('display-sheet-date').textContent = date;
+            document.getElementById('sheet-main-title').textContent = customTitle || "Fiche d'exercices et de révisions";
+        }
+
+        function toggleAnswerSheet() {
+            const show = document.getElementById('toggle-answers').checked;
+            const answerSheet = document.getElementById('answer-sheet');
+            if (!answerSheet) return;
+            if (show) {
+                answerSheet.classList.remove('hidden');
+            } else {
+                answerSheet.classList.add('hidden');
+            }
+        }
+
+        // --- 10. GESTION DU ZOOM DE PRÉVISUALISATION ---
+        function adjustZoom(delta) {
+            state.manualZoom = true; // le resize ne doit plus écraser le choix de l'utilisateur
+            state.zoom = Math.min(1.3, Math.max(0.45, +(state.zoom + delta).toFixed(2)));
+            applyZoom();
+        }
+
+        function resetZoom() {
+            state.manualZoom = false;
+            autoFitMobileZoom();
+        }
+
+        function autoFitMobileZoom() {
+            const container = document.querySelector('.workspace-container');
+            if (!container) return;
+            const containerWidth = container.clientWidth - 32;
+            const a4PixelWidth = 794;
+            if (containerWidth < a4PixelWidth) {
+                state.zoom = Math.max(0.45, +(containerWidth / a4PixelWidth).toFixed(2));
+            } else {
+                state.zoom = 1;
+            }
+            applyZoom();
+        }
+
+        function applyZoom() {
+            const wrapper = document.getElementById('zoom-wrapper');
+            const label = document.getElementById('zoom-label');
+            if (!wrapper) return;
+            wrapper.style.transform = `scale(${state.zoom})`;
+            wrapper.style.transformOrigin = 'top center';
+            // Sans ça, le conteneur garde la hauteur non zoomée : blanc / chevauchement.
+            const sheets = wrapper.querySelectorAll('.a4-sheet');
+            let total = 0;
+            sheets.forEach(s => { total += s.offsetHeight + 32; });
+            if (total > 0) wrapper.style.height = `${Math.round(total * state.zoom)}px`;
+            if (label) label.textContent = `${Math.round(state.zoom * 100)}%`;
+        }
+
+        // Resize : ne ré-auto-fit que si l'utilisateur n'a pas choisi son zoom.
+        window.addEventListener('resize', () => { if (!state.manualZoom) autoFitMobileZoom(); });
+        // DOMContentLoaded au lieu de window.onload = ... qui écrase tout autre onload.
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initUI);
+        } else {
+            initUI();
+        }
+    </script>
+</body>
+</html>
